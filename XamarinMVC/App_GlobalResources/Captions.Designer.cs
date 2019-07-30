@@ -61,6 +61,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Activation Code.
+        /// </summary>
+        public static string ActivationCode {
+            get {
+                return ResourceManager.GetString("ActivationCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         public static string AddressCity {
@@ -111,6 +120,24 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Mobile {
             get {
                 return ResourceManager.GetString("Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New RePassword.
+        /// </summary>
+        public static string NewPassword {
+            get {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New RePassword.
+        /// </summary>
+        public static string NewRePassword {
+            get {
+                return ResourceManager.GetString("NewRePassword", resourceCulture);
             }
         }
         
@@ -178,7 +205,7 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to نام کاربری.
+        ///   Looks up a localized string similar to User Name.
         /// </summary>
         public static string UserName {
             get {

@@ -121,7 +121,7 @@
     <value>فعالسازی</value>
   </data>
   <data name="ActivisionCode" xml:space="preserve">
-    <value>کد فعالسازی شما{0} می باشد</value>
+    <value>کد فعالسازی شما {0} می باشد</value>
   </data>
   <data name="BacktoList" xml:space="preserve">
     <value>بازگشت به لیست</value>

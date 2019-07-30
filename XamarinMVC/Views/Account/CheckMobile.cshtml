@@ -12,7 +12,7 @@
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <span class="account-form-title">
-            @Resources.Texts.ActivisionCode
+            @Resources.Texts.Activate
         </span>
 
         <div class="wrap-input-account">
@@ -21,7 +21,7 @@
             @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
         </div>
         <div class="container-button">
-            <button class="account-Button">
+            <button class="account-button">
                 @Resources.Texts.Send
             </button>
         </div>

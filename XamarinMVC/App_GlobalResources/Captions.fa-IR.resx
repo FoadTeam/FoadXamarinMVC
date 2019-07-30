@@ -157,6 +157,15 @@
     <value>انتخاب</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>User Name</value>
+    <value>نام کاربری</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>کلمه عبور جدید</value>
+  </data>
+  <data name="NewRePassword" xml:space="preserve">
+    <value>تکرار کلمه عبور جدید</value>
+  </data>
+  <data name="ActivationCode" xml:space="preserve">
+    <value>کد فعالسازی</value>
   </data>
 </root>

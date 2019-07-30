@@ -157,6 +157,15 @@
     <value>Submit</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>نام کاربری</value>
+    <value>User Name</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New RePassword</value>
+  </data>
+  <data name="NewRePassword" xml:space="preserve">
+    <value>New RePassword</value>
+  </data>
+  <data name="ActivationCode" xml:space="preserve">
+    <value>Activation Code</value>
   </data>
 </root>

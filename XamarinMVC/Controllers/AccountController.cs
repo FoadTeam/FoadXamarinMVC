@@ -171,19 +171,31 @@ namespace XamarinMVC.Controllers
             if (ModelState.IsValid)
             {
                 var user = db.users.FirstOrDefault(u => u.Mobile == checkMobile.Mobile);
-                if(user == null)
+                if(user != null)
                 {
                     SMSSender sms = new SMSSender();
-                    MailMessage mail = new MailMessage("foad.menbari@live.com","foad.menbari@gmail.com","XamarinMVC","Activiation Code");
+                    MailMessage mail = new MailMessage("foad.menbari@live.com","foad.menbari@gmail.com", XamarinMVC.App_GlobalResources.Texts.ActivisionCode, user.Code);
                     SmtpClient client = new SmtpClient();
                     client.Send(mail);
-                    sms.SendSMS(user.Mobile,"fdfsdfs");
+                    sms.SendSMS(user.Mobile, " "+ XamarinMVC.App_GlobalResources.Texts.ActivisionCode + ": "+ user.Code);
                 }
                 else
                 {
                     ModelState.AddModelError("Mobile", XamarinMVC.App_GlobalResources.Errors.CheckMobile);
                 }
             }
+            return View();
+        }
+
+        public ActionResult ForgetPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ForgetPassword(ForgetPasswordViewModel forgetPassword)
+        {
+
             return View();
         }
 
