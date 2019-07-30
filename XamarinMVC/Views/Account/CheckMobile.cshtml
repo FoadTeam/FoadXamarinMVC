@@ -1,0 +1,39 @@
+﻿@model XamarinMVC.Models.CheckMobileViewModel
+
+@{
+    ViewBag.Title = "CheckMobile";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<div class="wrap-account-pic col-lg-6 col-md-6 hidden-xs hidden-sm" style="background-image:url(../../Images/Site/foreign.jpg)"></div>
+<div class="account-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <span class="account-form-title">
+            @Resources.Texts.ActivisionCode
+        </span>
+
+        <div class="wrap-input-account">
+            @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Mobile } })
+            <span class="focus-account"></span>
+            @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+        </div>
+        <div class="container-button">
+            <button class="account-Button">
+                @Resources.Texts.Send
+            </button>
+        </div>
+    }
+</div>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

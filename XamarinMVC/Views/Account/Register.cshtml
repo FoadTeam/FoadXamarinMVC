@@ -1,0 +1,48 @@
+﻿@model XamarinMVC.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+
+<div class="wrap-account-pic col-lg-6 col-md-6 hidden-xs hidden-sm" style="background-image:url(../../Images/Site/register.png)"></div>
+
+<div class="account-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+    <span class="account-form-title center-block">
+        @Resources.Texts.RegistrationForm
+    </span>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="wrap-input-account">
+            @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Mobile } })
+            <span class="focus-account"></span>
+            @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+        </div>
+        <div class="wrap-input-account">
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Password } })
+            <span class="focus-account"></span>
+            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+        </div>
+        <div class="wrap-input-account">
+            @Html.EditorFor(model => model.RePassword, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.RePassword } })
+            <span class="focus-account"></span>
+            @Html.ValidationMessageFor(model => model.RePassword, "", new { @class = "text-danger" })
+        </div>
+        <div class="container-button">
+            <button type="submit" class="account-button">
+                @Resources.Texts.Register
+            </button>
+        </div>
+
+    }
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+

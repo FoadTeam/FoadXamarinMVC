@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    @{
+
+
+
+        switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+        {
+            case "en-US":
+
+
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                break;
+            case "fa-IR":
+
+
+                <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle-rtl.css" rel="stylesheet" />
+                break;
+            default:
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                break;
+        }
+
+    }
+
+
+
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div style="width:100px; position:absolute; margin-left:5px;">
+        @using (Html.BeginForm("Index", "Account", FormMethod.Post))
+        {
+            <select name="ddlLanguage">
+                <option value="en-US">English</option>
+                <option value="fa-IR">فارسی</option>
+            </select>
+            <br />
+            <input type="submit" name=@Resources.Texts.Submit />
+        }
+    </div>
+
+    <div class="my-container">
+        <div class="container-form">
+            <div class="wrap-account">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap-rtl.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

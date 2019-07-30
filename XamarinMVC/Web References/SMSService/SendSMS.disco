@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://messagingws.negins.com/SendSMS.asmx?wsdl" docRef="http://messagingws.negins.com/SendSMS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://messagingws.negins.com/SendSMS.asmx" xmlns:q1="MessagingWS" binding="q1:SendSMSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://messagingws.negins.com/SendSMS.asmx" xmlns:q2="MessagingWS" binding="q2:SendSMSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

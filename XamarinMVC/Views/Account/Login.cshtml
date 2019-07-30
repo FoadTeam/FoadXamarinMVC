@@ -1,0 +1,51 @@
+﻿@model XamarinMVC.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+
+
+            <div class="wrap-account-pic col-lg-6 col-md-6 hidden-xs hidden-sm" style="background-image:url(../../Images/Site/foreign.jpg)"></div>
+            <div class="account-form col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height:100%;">
+
+                <span class="account-form-title" style="margin-bottom:50px;">
+                    @Resources.Texts.LoginForm
+                </span>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="wrap-input-account">
+                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Mobile } })
+                    <span class="focus-account"></span>
+                    @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                </div>
+                    <div class="wrap-input-account">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Password } })
+                        <span class="focus-account"></span>
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="container-button">
+                        <button class="account-button">
+                            @Resources.Texts.Login
+                        </button>
+                    </div>
+
+
+                }
+
+            </div>
+           
+
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+
+            <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+            <script src="~/Scripts/jquery.validate.min.js"></script>
+            <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

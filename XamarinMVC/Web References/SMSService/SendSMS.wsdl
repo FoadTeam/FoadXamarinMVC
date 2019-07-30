@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="MessagingWS" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="MessagingWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="MessagingWS">
+      <s:element name="GetSystemCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSystemCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSystemCreditResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDeliverystatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serverType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDeliverystatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDeliverystatusResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SingleSMSEngine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FlashSMS" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SingleSMSEngineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SingleSMSEngineResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="singleSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="singleSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="singleSMSResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiSMSEngine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobiles" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="FlashSMS" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="retCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MultiSMSEngineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MultiSMSEngineResult" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="retCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readInbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="latestCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readInboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readInboxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="returnStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PortalCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="latestCount" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="startID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInboxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="returnStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSystemCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemCredit" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDeliverystatusSoapIn">
+    <wsdl:part name="parameters" element="tns:getDeliverystatus" />
+  </wsdl:message>
+  <wsdl:message name="getDeliverystatusSoapOut">
+    <wsdl:part name="parameters" element="tns:getDeliverystatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSEngineSoapIn">
+    <wsdl:part name="parameters" element="tns:SingleSMSEngine" />
+  </wsdl:message>
+  <wsdl:message name="SingleSMSEngineSoapOut">
+    <wsdl:part name="parameters" element="tns:SingleSMSEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="singleSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:singleSMS" />
+  </wsdl:message>
+  <wsdl:message name="singleSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:singleSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiSMSEngineSoapIn">
+    <wsdl:part name="parameters" element="tns:MultiSMSEngine" />
+  </wsdl:message>
+  <wsdl:message name="MultiSMSEngineSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiSMSEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="readInboxSoapIn">
+    <wsdl:part name="parameters" element="tns:readInbox" />
+  </wsdl:message>
+  <wsdl:message name="readInboxSoapOut">
+    <wsdl:part name="parameters" element="tns:readInboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInboxSoapIn">
+    <wsdl:part name="parameters" element="tns:getInbox" />
+  </wsdl:message>
+  <wsdl:message name="getInboxSoapOut">
+    <wsdl:part name="parameters" element="tns:getInboxResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SendSMSSoap">
+    <wsdl:operation name="GetSystemCredit">
+      <wsdl:input message="tns:GetSystemCreditSoapIn" />
+      <wsdl:output message="tns:GetSystemCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDeliverystatus">
+      <wsdl:input message="tns:getDeliverystatusSoapIn" />
+      <wsdl:output message="tns:getDeliverystatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMSEngine">
+      <wsdl:input message="tns:SingleSMSEngineSoapIn" />
+      <wsdl:output message="tns:SingleSMSEngineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="singleSMS">
+      <wsdl:input message="tns:singleSMSSoapIn" />
+      <wsdl:output message="tns:singleSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiSMSEngine">
+      <wsdl:input message="tns:MultiSMSEngineSoapIn" />
+      <wsdl:output message="tns:MultiSMSEngineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readInbox">
+      <wsdl:input message="tns:readInboxSoapIn" />
+      <wsdl:output message="tns:readInboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInbox">
+      <wsdl:input message="tns:getInboxSoapIn" />
+      <wsdl:output message="tns:getInboxSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendSMSSoap" type="tns:SendSMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemCredit">
+      <soap:operation soapAction="MessagingWS/GetSystemCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDeliverystatus">
+      <soap:operation soapAction="MessagingWS/getDeliverystatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMSEngine">
+      <soap:operation soapAction="MessagingWS/SingleSMSEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="singleSMS">
+      <soap:operation soapAction="MessagingWS/singleSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiSMSEngine">
+      <soap:operation soapAction="MessagingWS/MultiSMSEngine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readInbox">
+      <soap:operation soapAction="MessagingWS/readInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInbox">
+      <soap:operation soapAction="MessagingWS/getInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendSMSSoap12" type="tns:SendSMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemCredit">
+      <soap12:operation soapAction="MessagingWS/GetSystemCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDeliverystatus">
+      <soap12:operation soapAction="MessagingWS/getDeliverystatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleSMSEngine">
+      <soap12:operation soapAction="MessagingWS/SingleSMSEngine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="singleSMS">
+      <soap12:operation soapAction="MessagingWS/singleSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiSMSEngine">
+      <soap12:operation soapAction="MessagingWS/MultiSMSEngine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readInbox">
+      <soap12:operation soapAction="MessagingWS/readInbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInbox">
+      <soap12:operation soapAction="MessagingWS/getInbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendSMS">
+    <wsdl:port name="SendSMSSoap" binding="tns:SendSMSSoap">
+      <soap:address location="http://messagingws.negins.com/SendSMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendSMSSoap12" binding="tns:SendSMSSoap12">
+      <soap12:address location="http://messagingws.negins.com/SendSMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

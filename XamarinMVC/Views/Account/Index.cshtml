@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@*<h2>Index</h2>*@
+
+<div class="wrap-account-pic col-lg-6 col-md-6 hidden-xs hidden-sm" style="background-image:url(../../Images/Site/foreign.jpg)"></div>
+<div class="account-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+    <span class="account-form-title">
+        @Resources.Texts.RegistrationForm
+    </span>
+
+    <div class="wrap-input-account">
+        <input  type="text" class="input-account" placeholder="@Resources.Captions.Mobile  "/>
+        <span class="focus-account"></span>
+    </div>
+    <div class="container-button">
+        <button class="account-Button">
+            @Resources.Texts.Register
+        </button>
+    </div>
+</div>
