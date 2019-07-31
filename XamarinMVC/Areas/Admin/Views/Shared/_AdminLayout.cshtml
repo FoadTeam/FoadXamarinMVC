@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    @{
+
+
+
+        switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+        {
+            case "en-US":
+
+            
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                break;
+            case "fa-IR":
+
+
+                <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle-rtl.css" rel="stylesheet" />
+                break;
+            default:
+                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                break;
+        }
+
+    }
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

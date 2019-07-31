@@ -34,6 +34,15 @@ namespace XamarinMVC.App_Start
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/AccountFA").Include(
+                      "~/Content/bootstrap-rtl.min.css",
+                      "~/Content/AccountStyle-rtl.css"));
+
+            bundles.Add(new StyleBundle("~/Content/AccountEN").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/AccountStyle.css"));
+
         }
     }
 }

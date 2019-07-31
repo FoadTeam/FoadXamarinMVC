@@ -168,4 +168,7 @@
   <data name="ActivationCode" xml:space="preserve">
     <value>کد فعالسازی</value>
   </data>
+  <data name="Code" xml:space="preserve">
+    <value>کد</value>
+  </data>
 </root>

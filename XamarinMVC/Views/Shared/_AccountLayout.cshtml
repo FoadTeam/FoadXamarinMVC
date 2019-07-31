@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html lang="fa">
 <head>
@@ -13,20 +14,13 @@
         switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
         {
             case "en-US":
-
-
-                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AccountEN")
                 break;
             case "fa-IR":
-
-
-                <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle-rtl.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AccountFA")
                 break;
             default:
-                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AccountFA")
                 break;
         }
 
@@ -59,9 +53,10 @@
         </div>
     </div>
 
-
+    
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
     <script src="~/Scripts/bootstrap-rtl.min.js"></script>
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>

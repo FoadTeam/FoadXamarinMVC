@@ -11,7 +11,7 @@
             <div class="account-form col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height:100%;">
 
                 <span class="account-form-title" style="margin-bottom:50px;">
-                    @Resources.Texts.LoginForm
+                    @XamarinMVC.App_GlobalResources.Texts.LoginForm
                 </span>
 
                 @using (Html.BeginForm())
@@ -21,18 +21,24 @@
 
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="wrap-input-account">
-                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Mobile } })
+                    @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "input-account", @placeholder = XamarinMVC.App_GlobalResources.Captions.Mobile } })
                     <span class="focus-account"></span>
                     @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
                 </div>
                     <div class="wrap-input-account">
-                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input-account", @placeholder = Resources.Captions.Password } })
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input-account", @placeholder = XamarinMVC.App_GlobalResources.Captions.Password } })
                         <span class="focus-account"></span>
                         @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                     </div>
+                    <div class="container-button" style="margin-bottom:25px;">
+                        <button type="submit" class="account-button">
+                            @XamarinMVC.App_GlobalResources.Texts.Login
+                        </button>
+                    </div>
+
                     <div class="container-button">
-                        <button class="account-button">
-                            @Resources.Texts.Login
+                        <button onclick="window.open('/Account/CheckMobile')" class="account-button">
+                            @XamarinMVC.App_GlobalResources.Texts.ForgetPassword
                         </button>
                     </div>
 

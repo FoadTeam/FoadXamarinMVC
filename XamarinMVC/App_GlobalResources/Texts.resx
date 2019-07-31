@@ -129,6 +129,9 @@
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>Forget Password</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>

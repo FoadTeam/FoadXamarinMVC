@@ -56,7 +56,7 @@ namespace XamarinMVC.Models
     public class ForgetPasswordViewModel
     {
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "Code")]
-        [MaxLength(6,ErrorMessageResourceType =typeof(XamarinMVC.App_GlobalResources.Errors),ErrorMessageResourceName ="MaxLength")]
+        [MaxLength(6, ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors), ErrorMessageResourceName = "MaxLength")]
         public string Code { get; set; }
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "NewPassword")]
@@ -70,3 +70,4 @@ namespace XamarinMVC.Models
         [Compare("Password", ErrorMessageResourceName = "ComparePassword", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string RePassword { get; set; }
     }
+}

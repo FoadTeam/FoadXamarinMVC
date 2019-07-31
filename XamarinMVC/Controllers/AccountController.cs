@@ -17,12 +17,6 @@ namespace XamarinMVC.Controllers
     {
         DatabaseContext db = new DatabaseContext();
         // GET: Account
-        public ActionResult Index()
-        {
-          
-            return View();
-
-        }
 
         [HttpPost]
         public ActionResult Index(FormCollection collection)
@@ -178,6 +172,7 @@ namespace XamarinMVC.Controllers
                     SmtpClient client = new SmtpClient();
                     client.Send(mail);
                     sms.SendSMS(user.Mobile, " "+ XamarinMVC.App_GlobalResources.Texts.ActivisionCode + ": "+ user.Code);
+                    return RedirectToAction("ForgetPassword");
                 }
                 else
                 {
@@ -195,8 +190,27 @@ namespace XamarinMVC.Controllers
         [HttpPost]
         public ActionResult ForgetPassword(ForgetPasswordViewModel forgetPassword)
         {
+            if (ModelState.IsValid)
+            {
+                string myhash = FormsAuthentication.HashPasswordForStoringInConfigFile(forgetPassword.Password, "MD5");
+                var user = db.users.FirstOrDefault(u => u.Code == forgetPassword.Code);
+                if(user != null)
+                {
+                    Random rnd = new Random();
+                    int myrnd = rnd.Next(100000, 900000);
+                    user.Code = myrnd.ToString();
+                    user.Password = myhash;
+                    db.SaveChanges();
+                    return RedirectToAction("login");
 
-            return View();
+                }
+                else
+                {
+                    ModelState.AddModelError("Code", XamarinMVC.App_GlobalResources.Errors.ActivationCodeError);
+                }
+            }
+
+            return View(forgetPassword);
         }
 
     }
