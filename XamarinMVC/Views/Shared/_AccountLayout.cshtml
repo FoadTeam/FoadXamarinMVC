@@ -34,15 +34,7 @@
 </head>
 <body>
     <div style="width:100px; position:absolute; margin-left:5px;">
-        @using (Html.BeginForm("Index", "Account", FormMethod.Post))
-        {
-            <select name="ddlLanguage">
-                <option value="en-US">English</option>
-                <option value="fa-IR">فارسی</option>
-            </select>
-            <br />
-            <input type="submit" name=@Resources.Texts.Submit />
-        }
+        @Html.Partial("_LanguagePartial")
     </div>
 
     <div class="my-container">

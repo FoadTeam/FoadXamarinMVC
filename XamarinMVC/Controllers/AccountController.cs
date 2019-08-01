@@ -17,9 +17,13 @@ namespace XamarinMVC.Controllers
     {
         DatabaseContext db = new DatabaseContext();
         // GET: Account
+        public ActionResult Index()
+        {
+            return View();
+        }
 
         [HttpPost]
-        public ActionResult Index(FormCollection collection)
+        public ActionResult Language(FormCollection collection)
         {
             
             string language = collection["ddlLanguage"];

@@ -171,4 +171,19 @@
   <data name="Code" xml:space="preserve">
     <value>کد</value>
   </data>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>پنل مدیریت</value>
+  </data>
+  <data name="ContactSetting" xml:space="preserve">
+    <value>تنظیمات تماس</value>
+  </data>
+  <data name="SiteSetting" xml:space="preserve">
+    <value>تنظیمات سایت</value>
+  </data>
+  <data name="SMSSetting" xml:space="preserve">
+    <value>تنضیمات پیامک</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
 </root>

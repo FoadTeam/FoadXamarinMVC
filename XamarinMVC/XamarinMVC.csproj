@@ -117,6 +117,8 @@
   <ItemGroup>
     <Content Include="Content\AccountStyle.css" />
     <Content Include="Content\AccountStyle-rtl.css" />
+    <Content Include="Content\AdminStyle-rtl.css" />
+    <Content Include="Content\AdminStyle.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -180,8 +182,9 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Default\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Default\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Default\_LanguagePartial.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,6 +221,7 @@
     <Content Include="Views\Account\Activate.cshtml" />
     <Content Include="Views\Account\CheckMobile.cshtml" />
     <Content Include="Views\Account\ForgetPassword.cshtml" />
+    <Content Include="Views\Account\_LanguagePartial.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

@@ -7,35 +7,66 @@
     <meta name="viewport" content="width=device-width , initial-scale=1" />
     <title>@ViewBag.Title</title>
     @{
-
-
-
+        string dir = null;
         switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
         {
             case "en-US":
-
-            
-                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AdminEN")
+                dir = "rtl";
                 break;
             case "fa-IR":
-
-
-                <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle-rtl.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AdminFA")
+                dir = "ltr";
                 break;
             default:
-                <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-                <link href="~/Content/AccountStyle.css" rel="stylesheet" />
+                @Styles.Render("~/Content/AdminFA")
+                dir = "ltr";
                 break;
         }
-
     }
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="container-fluid">
+        <div class="row topnav">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="/Admin/Default" style="font-size:20px">@Resources.Captions.AdminPanel</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="direction:@dir">
+                <a href="/"><span class="fa fa-sign-out"></span></a>
+                <a href="/"><span class="fa fa-eye"></span></a>
+                @Html.Partial("_LanguagePartial")
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="sidebar">
+                <a href="#" class="active"><span class="fa fa-user"></span>@Resources.Captions.Users</a>
+                <a href="#"><span class="fa fa-mobile"></span>@Resources.Captions.SMSSetting</a>
+                <a href="#"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
+                <a href="#"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
     </div>
 
+
+
+    @{
+        switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+        {
+            case "en-US":
+                @Scripts.Render("~/bundles/jquery", "~/bundles/BootStrapEN")
+                break;
+            case "fa-IR":
+                @Scripts.Render("~/bundles/jquery", "~/bundles/BootStrapFA")
+                break;
+            default:
+                @Scripts.Render("~/bundles/jquery", "~/bundles/BootStrapFA")
+                break;
+        }
+    }
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

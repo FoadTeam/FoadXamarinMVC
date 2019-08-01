@@ -1,0 +1,9 @@
+﻿@using (Html.BeginForm("Language", "Account", FormMethod.Post))
+{
+    <select name="ddlLanguage">
+        <option value="en-US">English</option>
+        <option value="fa-IR">فارسی</option>
+    </select>
+    <br />
+    <input type="submit" name=@Resources.Texts.Submit />
+}

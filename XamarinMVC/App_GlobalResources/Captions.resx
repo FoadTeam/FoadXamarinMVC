@@ -171,4 +171,19 @@
   <data name="Code" xml:space="preserve">
     <value>Code</value>
   </data>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>Admin Panel</value>
+  </data>
+  <data name="ContactSetting" xml:space="preserve">
+    <value>Contact Setting</value>
+  </data>
+  <data name="SiteSetting" xml:space="preserve">
+    <value>Site Setting</value>
+  </data>
+  <data name="SMSSetting" xml:space="preserve">
+    <value>SMS Setting</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
 </root>

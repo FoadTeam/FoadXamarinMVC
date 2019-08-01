@@ -26,7 +26,10 @@ namespace XamarinMVC.App_Start
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-              
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/respond.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/custom-validator").Include(
                                   "~/Scripts/jquery.validate.min.js",
                                   "~/Scripts/jquery.validate.unobtrusive.min"));
@@ -34,7 +37,7 @@ namespace XamarinMVC.App_Start
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-
+            /////////////////////////Account//////////////////////////
             bundles.Add(new StyleBundle("~/Content/AccountFA").Include(
                       "~/Content/bootstrap-rtl.min.css",
                       "~/Content/AccountStyle-rtl.css"));
@@ -42,7 +45,26 @@ namespace XamarinMVC.App_Start
             bundles.Add(new StyleBundle("~/Content/AccountEN").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/AccountStyle.css"));
+            /////////////////////////Account//////////////////////////
+            ////////////////////Admin/////////////////////////////
+            bundles.Add(new StyleBundle("~/Content/AdminFA").Include(
+                      "~/Content/bootstrap-rtl.min.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/AdminStyle-rtl.css"));
 
+            bundles.Add(new StyleBundle("~/Content/AdminEN").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/AdminStyle.css"));
+            ////////////////////Admin/////////////////////////////////////
+            ///////////////////////////////Jquery//////////////////////////////
+            bundles.Add(new ScriptBundle("~/bundles/BootStrapEN").Include(
+                        "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.bundle.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/BootStrapFA").Include(
+                       "~/Scripts/bootstrap-rtl.min.js",
+                      "~/Scripts/bootstrap.bundle.min.js"));
+            
         }
     }
 }
