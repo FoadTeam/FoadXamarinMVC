@@ -135,7 +135,7 @@
   <data name="Mobile" xml:space="preserve">
     <value>موبایل</value>
   </data>
-  <data name="nname" xml:space="preserve">
+  <data name="Name" xml:space="preserve">
     <value>نام</value>
   </data>
   <data name="Password" xml:space="preserve">
@@ -185,5 +185,32 @@
   </data>
   <data name="Users" xml:space="preserve">
     <value>کاربران</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>شرح</value>
+  </data>
+  <data name="FactorIsSend" xml:space="preserve">
+    <value>پیامک فاکتور</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>فکس</value>
+  </data>
+  <data name="KeyWords" xml:space="preserve">
+    <value>کلمات کلیدی</value>
+  </data>
+  <data name="PayIsSend" xml:space="preserve">
+    <value>پیامک پرداخت</value>
+  </data>
+  <data name="SmsPassword" xml:space="preserve">
+    <value>پیامک رمزعبور</value>
+  </data>
+  <data name="SmsSender" xml:space="preserve">
+    <value>پیامک فرستنده</value>
+  </data>
+  <data name="SmsUser" xml:space="preserve">
+    <value>نام کاربری فاکتور</value>
+  </data>
+  <data name="Tell" xml:space="preserve">
+    <value>تلفن</value>
   </data>
 </root>

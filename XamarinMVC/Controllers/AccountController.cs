@@ -23,15 +23,18 @@ namespace XamarinMVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Language(FormCollection collection)
+        public ActionResult Language(string collection)
         {
-            
-            string language = collection["ddlLanguage"];
-            SetCulture(language);
 
+            //string language = collection["ddlLanguage"];
+            //SetCulture(language);
+            string str = Request.Params["btn1"];
+
+
+            SetCulture(str);
             return Redirect(Request.UrlReferrer.ToString());
         }
-        private void SetCulture(string cultureCode)
+        public void SetCulture(string cultureCode)
         {
 
             var cookieCultureLanguage = new HttpCookie("UserLanguage")
@@ -215,6 +218,11 @@ namespace XamarinMVC.Controllers
             }
 
             return View(forgetPassword);
+        }
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("Login");
         }
 
     }

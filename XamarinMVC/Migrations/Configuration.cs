@@ -55,10 +55,16 @@ namespace XamarinMVC.Migrations
                 db.SaveChanges();
 
             }
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            if(db.Settings.Count() == 0)
+            {
+                Setting setting = new Setting
+                {
+                    FactorIsSend=false,
+                    Name="FoadXamarinMVC"
+                };
+                db.Settings.Add(setting);
+                db.SaveChanges();
+            }
         }
     }
 }

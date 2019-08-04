@@ -154,6 +154,8 @@
     <Content Include="fonts\iranyekanwebregular.ttf" />
     <Content Include="fonts\iranyekanwebregular.woff" />
     <Content Include="Images\Site\active.jpg" />
+    <Content Include="Images\Site\en.png" />
+    <Content Include="Images\Site\fa.png" />
     <Content Include="Images\Site\foreign.jpg" />
     <Content Include="Images\Site\login.png" />
     <Content Include="Images\Site\register.png" />
@@ -184,7 +186,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Default\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Default\_LanguagePartial.cshtml" />
+    <Content Include="Areas\Admin\Views\Default\SiteSetting.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -221,7 +223,8 @@
     <Content Include="Views\Account\Activate.cshtml" />
     <Content Include="Views\Account\CheckMobile.cshtml" />
     <Content Include="Views\Account\ForgetPassword.cshtml" />
-    <Content Include="Views\Account\_LanguagePartial.cshtml" />
+    <Content Include="Views\Partials\_LanguagePartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -266,6 +269,7 @@
     <Compile Include="Classes\SMSSender.cs" />
     <Compile Include="Classes\XamProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -276,6 +280,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

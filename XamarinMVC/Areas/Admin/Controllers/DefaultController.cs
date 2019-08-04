@@ -4,53 +4,36 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
+using XamarinMVC.Models;
 
 namespace XamarinMVC.Areas.Admin.Controllers
 {
     public class DefaultController : Controller
     {
+        DatabaseContext db = new DatabaseContext();
         // GET: Admin/Default
         public ActionResult Index()
         {
             return View();
         }
-
- 
-
-
-        private void SetCulture(string cultureCode)
+        public ActionResult SiteSetting()
         {
-
-            var cookieCultureLanguage = new HttpCookie("UserLanguage")
-            {
-                Value = cultureCode
-            };
-
-            Response.Cookies.Set(cookieCultureLanguage);
-
-            //Sets  Culture for Current thread  
-            Thread.CurrentThread.CurrentCulture =
-            System.Globalization.CultureInfo.CreateSpecificCulture("fa-IR");
-
-            //Ui Culture for Localized text in the UI  
-            Thread.CurrentThread.CurrentUICulture =
-            new System.Globalization.CultureInfo(cultureCode);
-
+            var setting = db.Settings.FirstOrDefault();
+            return View(setting);
         }
-
-        public ActionResult Language()
-        {
-            return View();
-        }
-
         [HttpPost]
-        public ActionResult Language(FormCollection collection)
+        public ActionResult SiteSetting(Setting setting)
         {
-
-            string language = collection["ddlLanguage"];
-            SetCulture(language);
-
-            return Redirect(Request.UrlReferrer.ToString());
+            var set = db.Settings.FirstOrDefault();
+            set.Description = setting.Description;
+            set.Key = setting.Key;
+            set.Name = setting.Name;
+            db.SaveChanges();
+            return View(setting);
         }
+
+
+
+
     }
 }
