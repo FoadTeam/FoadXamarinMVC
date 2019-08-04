@@ -16,5 +16,6 @@ namespace XamarinMVC.Models
         public DbSet<User> users { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<Social> Socials { get; set; }
     }
 }

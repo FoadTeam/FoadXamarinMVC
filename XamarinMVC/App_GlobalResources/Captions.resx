@@ -180,9 +180,6 @@
   <data name="SiteSetting" xml:space="preserve">
     <value>Site Setting</value>
   </data>
-  <data name="SMSSetting" xml:space="preserve">
-    <value>SMS Setting</value>
-  </data>
   <data name="Users" xml:space="preserve">
     <value>Users</value>
   </data>
@@ -193,7 +190,7 @@
     <value>Factor Is Send</value>
   </data>
   <data name="Fax" xml:space="preserve">
-    <value />
+    <value>Fax</value>
   </data>
   <data name="KeyWords" xml:space="preserve">
     <value>Key Words</value>
@@ -215,5 +212,41 @@
   </data>
   <data name="EmailSender" xml:space="preserve">
     <value>Email Sender</value>
+  </data>
+  <data name="EmailHost" xml:space="preserve">
+    <value>Email Host</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>Email Password</value>
+  </data>
+  <data name="EmailPort" xml:space="preserve">
+    <value>Email Port</value>
+  </data>
+  <data name="EmailSSl" xml:space="preserve">
+    <value>Email SSl</value>
+  </data>
+  <data name="EmailUser" xml:space="preserve">
+    <value>Email User Name</value>
+  </data>
+  <data name="CallSetting" xml:space="preserve">
+    <value>Call Setting</value>
+  </data>
+  <data name="SMSEmailSetting" xml:space="preserve">
+    <value>SMS &amp; Email Setting</value>
+  </data>
+  <data name="SocialIcon" xml:space="preserve">
+    <value>Social Icon</value>
+  </data>
+  <data name="SocialLink" xml:space="preserve">
+    <value>Social Link</value>
+  </data>
+  <data name="SocialName" xml:space="preserve">
+    <value>Social Name</value>
+  </data>
+  <data name="SocialNotShow" xml:space="preserve">
+    <value>Social Not Show</value>
+  </data>
+  <data name="SocialOrder" xml:space="preserve">
+    <value>Social Order</value>
   </data>
 </root>

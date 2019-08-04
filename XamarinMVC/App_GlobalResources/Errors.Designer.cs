@@ -88,6 +88,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Enter {0} in Currect Type.
+        /// </summary>
+        public static string CurrectType {
+            get {
+                return ResourceManager.GetString("CurrectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed Login.
         /// </summary>
         public static string FailedLogin {

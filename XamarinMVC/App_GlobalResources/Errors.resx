@@ -126,6 +126,9 @@
   <data name="ComparePassword" xml:space="preserve">
     <value>Password and Confirm Password Should be match</value>
   </data>
+  <data name="CurrectType" xml:space="preserve">
+    <value>Please Enter {0} in Currect Type</value>
+  </data>
   <data name="FailedLogin" xml:space="preserve">
     <value>Failed Login</value>
   </data>

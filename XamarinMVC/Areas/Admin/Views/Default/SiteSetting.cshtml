@@ -1,19 +1,19 @@
 ﻿@model XamarinMVC.Models.Setting
 
 @{
-    ViewBag.Title = "SiteSetting";
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Captions.SiteSetting;
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 <div style="margin-bottom:50px;">
     <h2>@XamarinMVC.App_GlobalResources.Captions.SiteSetting</h2>
 </div>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -30,7 +30,6 @@
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Key, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -38,7 +37,6 @@
                 @Html.ValidationMessageFor(model => model.Key, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="@XamarinMVC.App_GlobalResources.Texts.Submit" class="btn btn-success btn-block" />
@@ -47,8 +45,6 @@
     </div>
 }
 
-
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace XamarinMVC.Models
 {
@@ -40,21 +41,24 @@ namespace XamarinMVC.Models
         [DataType(DataType.MultilineText)]
         public string Address { get; set; }
 
-        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsUser")]
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "EmailUser")]
         [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
-        public string FromEmail { get; set; }
+        [DataType(DataType.EmailAddress,ErrorMessageResourceName ="CurrectType",ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string EmailUser { get; set; }
 
-        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsUser")]
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "EmailPassword")]
         [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
-        public string SmsUser { get; set; }
+        public string EmailPassword { get; set; }
 
-        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsUser")]
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "EmailHost")]
         [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
-        public string SmsUser { get; set; }
+        public string EmailHost { get; set; }
 
-        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsUser")]
-        [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
-        public string SmsUser { get; set; }
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "EmailPort")]
+        public int EmailPort { get; set; }
+
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "EmailSSl")]
+        public bool EmailSSl { get; set; }
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsUser")]
         [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
@@ -65,8 +69,7 @@ namespace XamarinMVC.Models
         public string SmsPassword { get; set; }
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "SmsSender")]
-        [MaxLength(30, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
-        public string SmsSender { get; set; }
+        public int SmsSender { get; set; }
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "FactorIsSend")]
         public bool FactorIsSend { get; set; }

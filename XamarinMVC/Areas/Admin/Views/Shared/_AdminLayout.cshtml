@@ -27,14 +27,14 @@
 </head>
 <body>
     <div class="container-fluid">
-        
+
         <div class="row topnav">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="/Admin/Default" style="font-size:20px">@Resources.Captions.AdminPanel</a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-inline" style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
-             
+
                 <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
                 <a href="/"><span class="fa fa-eye"></span></a>
             </div>
@@ -43,16 +43,15 @@
         <div class="row">
             <div class="sidebar">
                 <a href="#" class="active"><span class="fa fa-user"></span>@Resources.Captions.Users</a>
-                <a href="#"><span class="fa fa-mobile"></span>@Resources.Captions.SMSSetting</a>
+                <a href="/Admin/Default/SMSEmailSetting"><span class="fa fa-mobile"></span>@Resources.Captions.SMSEmailSetting</a>
                 <a href="/Admin/Default/SiteSetting"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
-                <a href="#"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
+                <a href="/Admin/Default/CallSetting"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
             </div>
         </div>
         <div class="content">
             @RenderBody()
         </div>
     </div>
-
 
 
     @{
@@ -70,5 +69,8 @@
         }
     }
     @RenderSection("Scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryui")
+
+
 </body>
 </html>

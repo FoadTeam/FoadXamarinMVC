@@ -180,9 +180,6 @@
   <data name="SiteSetting" xml:space="preserve">
     <value>تنظیمات سایت</value>
   </data>
-  <data name="SMSSetting" xml:space="preserve">
-    <value>تنضیمات پیامک</value>
-  </data>
   <data name="Users" xml:space="preserve">
     <value>کاربران</value>
   </data>
@@ -212,5 +209,41 @@
   </data>
   <data name="Tell" xml:space="preserve">
     <value>تلفن</value>
+  </data>
+  <data name="EmailHost" xml:space="preserve">
+    <value>دامنه ایمیل</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>پسورد ایمیل</value>
+  </data>
+  <data name="EmailPort" xml:space="preserve">
+    <value>پورت ایمیل</value>
+  </data>
+  <data name="EmailSSl" xml:space="preserve">
+    <value>SSL</value>
+  </data>
+  <data name="EmailUser" xml:space="preserve">
+    <value>نام کاربری ایمیل</value>
+  </data>
+  <data name="CallSetting" xml:space="preserve">
+    <value>تنظیمات تماس</value>
+  </data>
+  <data name="SMSEmailSetting" xml:space="preserve">
+    <value>تنظیمات پیامک و ایمیل</value>
+  </data>
+  <data name="SocialIcon" xml:space="preserve">
+    <value>آیکون شبکه اجتماعی</value>
+  </data>
+  <data name="SocialLink" xml:space="preserve">
+    <value>لینک شبکه اجتماعی</value>
+  </data>
+  <data name="SocialName" xml:space="preserve">
+    <value>نام شبکه اجتماعی</value>
+  </data>
+  <data name="SocialNotShow" xml:space="preserve">
+    <value>نمایش ندادن شبکه اجتماعی</value>
+  </data>
+  <data name="SocialOrder" xml:space="preserve">
+    <value>ترتیب نمایش شبکه اجتماعی</value>
   </data>
 </root>

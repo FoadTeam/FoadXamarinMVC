@@ -1,0 +1,61 @@
+﻿@model IEnumerable<XamarinMVC.Models.Social>
+
+@{
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Texts.ShowSocialMedia;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.ShowSocialMedia</h2>
+    <h2 class="pull-left">
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.New, "Create", "", new { @class = "btn btn-success" })
+    </h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<hr />
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Icon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotShow)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order)
+        </th>
+        <th>@XamarinMVC.App_GlobalResources.Texts.Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Icon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotShow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order)
+            </td>
+            <td>
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

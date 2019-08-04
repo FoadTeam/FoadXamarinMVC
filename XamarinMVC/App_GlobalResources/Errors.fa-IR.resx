@@ -126,6 +126,9 @@
   <data name="ComparePassword" xml:space="preserve">
     <value>کلمه عبور و تکرار آن باید یکی باشد</value>
   </data>
+  <data name="CurrectType" xml:space="preserve">
+    <value>لطفا {0} را با فرمت صحیح وارد نمایید</value>
+  </data>
   <data name="FailedLogin" xml:space="preserve">
     <value>کاربری با مشخصات شما وجود ندارد</value>
   </data>
