@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 <div>
-    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.ShowSocialMedia</h2>
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.SocialNetwork : @Model.Name</h2>
     <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "", new { @class = "btn btn-danger" })</h2>
 </div>
 <div class="clearfix" style="margin-bottom:50px"></div>
@@ -55,7 +55,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Order, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control", @min = 1 } })
                 @Html.ValidationMessageFor(model => model.Order, "", new { @class = "text-danger" })
             </div>
         </div>

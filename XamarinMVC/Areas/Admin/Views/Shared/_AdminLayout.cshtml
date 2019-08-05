@@ -2,6 +2,11 @@
 
 <html lang="fa">
 <head>
+    @using XamarinMVC.Models;
+    @{ 
+        DatabaseContext db = new DatabaseContext();
+        var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+    }
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width , initial-scale=1" />
@@ -30,7 +35,15 @@
 
         <div class="row topnav">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <a href="/Admin/Default" style="font-size:20px">@Resources.Captions.AdminPanel</a>
+                @if (user.Role.RoleName == "Admin")
+                {
+                    <a href="/Admin/Default" style="font-size:20px">@Resources.Captions.AdminPanel</a>
+                }
+                else
+                {
+                    <a href="/Profile/Index" style="font-size:20px">@Resources.Texts.UserPanel</a>
+                }
+                
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-inline" style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
@@ -42,10 +55,19 @@
         </div>
         <div class="row">
             <div class="sidebar">
-                <a href="#" class="active"><span class="fa fa-user"></span>@Resources.Captions.Users</a>
-                <a href="/Admin/Default/SMSEmailSetting"><span class="fa fa-mobile"></span>@Resources.Captions.SMSEmailSetting</a>
-                <a href="/Admin/Default/SiteSetting"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
-                <a href="/Admin/Default/CallSetting"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
+                @if (user.Role.RoleName == "Admin")
+                {
+                    <a href="#" class="active"><span class="fa fa-user"></span>@Resources.Captions.Users</a>
+                    <a href="/Admin/Default/SMSEmailSetting"><span class="fa fa-mobile"></span>@Resources.Captions.SMSEmailSetting</a>
+                    <a href="/Admin/Default/SiteSetting"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
+                    <a href="/Admin/Default/CallSetting"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
+                    <a href="/Admin/Socials"><span class="fa fa-users"></span>@Resources.Texts.SocialNetwork</a>
+                }
+                else
+                {
+                    <a href="#" class="active"><span class="fa fa-address-book"></span>@Resources.Texts.MyAddresses</a>
+                }
+
             </div>
         </div>
         <div class="content">

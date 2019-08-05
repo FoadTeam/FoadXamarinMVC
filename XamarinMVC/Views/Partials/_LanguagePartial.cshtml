@@ -1,7 +1,9 @@
 ﻿@using (Html.BeginForm("Language", "Account", new { area = "" }, FormMethod.Post))
 {
 <div class="form-inline">
-    <input type="submit" style="background-image:url(../../../../Images/Site/en.png)" value="en-US" name="btn1" >
-    <input type="submit" style="background-image:url(../../../../Images/Site/fa.png)" value="fa-IR" name="btn1" />
+    @*<input type="submit" style=" width:20px; height:10px; background-image:url(../../../../Images/Site/en.png)" value="en-US" name="btn1" />
+    <input type="submit" style="background-image:url(../../../../Images/Site/fa.png)" class="fa fa-flag-o" value="fa-IR" name="btn1" />*@
+    <button type="submit" name="btn1" value="en-US" style="padding:0;border-radius:50%; border:0"><img width="30" height="30" src="~/Images/Site/en.png" /></button>
+    <button type="submit" name="btn1" value="fa-IR" style="padding:0;border-radius:50%; border:0"><img width="30" height="30" src="~/Images/Site/fa.png" /></button>
 </div>
 }

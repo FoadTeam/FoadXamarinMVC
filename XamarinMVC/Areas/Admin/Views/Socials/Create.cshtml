@@ -55,7 +55,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Order, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Order, new { htmlAttributes = new { @class = "form-control" , @Value= 1, @min=1 } })
                 @Html.ValidationMessageFor(model => model.Order, "", new { @class = "text-danger" })
             </div>
         </div>

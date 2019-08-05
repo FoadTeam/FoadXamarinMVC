@@ -169,6 +169,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Addresses.
+        /// </summary>
+        public static string MyAddresses {
+            get {
+                return ResourceManager.GetString("MyAddresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -232,11 +241,29 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Social Network.
+        /// </summary>
+        public static string SocialNetwork {
+            get {
+                return ResourceManager.GetString("SocialNetwork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Submit.
         /// </summary>
         public static string Submit {
             get {
                 return ResourceManager.GetString("Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Panel.
+        /// </summary>
+        public static string UserPanel {
+            get {
+                return ResourceManager.GetString("UserPanel", resourceCulture);
             }
         }
     }

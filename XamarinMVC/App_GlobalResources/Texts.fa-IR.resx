@@ -153,6 +153,9 @@
   <data name="LoginForm" xml:space="preserve">
     <value>فرم ورود</value>
   </data>
+  <data name="MyAddresses" xml:space="preserve">
+    <value>آدرس های من</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>جدید</value>
   </data>
@@ -174,7 +177,13 @@
   <data name="ShowSocialMedia" xml:space="preserve">
     <value>نمایش شبکه های اجتماعی</value>
   </data>
+  <data name="SocialNetwork" xml:space="preserve">
+    <value>شبکه اجتماعی</value>
+  </data>
   <data name="Submit" xml:space="preserve">
     <value>تایید</value>
+  </data>
+  <data name="UserPanel" xml:space="preserve">
+    <value>پنل کاربری</value>
   </data>
 </root>

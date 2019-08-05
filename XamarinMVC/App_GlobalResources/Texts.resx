@@ -153,6 +153,9 @@
   <data name="LoginForm" xml:space="preserve">
     <value>Login Form</value>
   </data>
+  <data name="MyAddresses" xml:space="preserve">
+    <value>My Addresses</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>New</value>
   </data>
@@ -174,7 +177,13 @@
   <data name="ShowSocialMedia" xml:space="preserve">
     <value>Show Social Media</value>
   </data>
+  <data name="SocialNetwork" xml:space="preserve">
+    <value>Social Network</value>
+  </data>
   <data name="Submit" xml:space="preserve">
     <value>Submit</value>
+  </data>
+  <data name="UserPanel" xml:space="preserve">
+    <value>User Panel</value>
   </data>
 </root>

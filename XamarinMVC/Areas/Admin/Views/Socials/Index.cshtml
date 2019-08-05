@@ -52,8 +52,8 @@
                 @Html.DisplayFor(modelItem => item.Order)
             </td>
             <td>
-                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }) |
-                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id })
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id}, new { @class = "btn btn-info" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id}, new {@class = "btn btn-warning" })
             </td>
         </tr>
     }
