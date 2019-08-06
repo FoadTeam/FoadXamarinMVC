@@ -70,4 +70,23 @@ namespace XamarinMVC.Models
         [Compare("Password", ErrorMessageResourceName = "ComparePassword", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string RePassword { get; set; }
     }
+
+    public class ChangePasswordViewModel
+    {
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "Password")]
+        [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string OldPassword { get; set; }
+
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "NewPassword")]
+        [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string Password { get; set; }
+
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "NewRePassword")]
+        [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [Compare("Password", ErrorMessageResourceName = "ComparePassword", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string RePassword { get; set; }
+    }
 }

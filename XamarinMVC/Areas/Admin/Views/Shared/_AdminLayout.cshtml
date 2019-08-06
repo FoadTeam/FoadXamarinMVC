@@ -50,6 +50,10 @@
 
                 <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
                 <a href="/"><span class="fa fa-eye"></span></a>
+                @if (user.Role.RoleName == "Admin")
+                {
+                    <a href="/Profile/ChangePassword"><span class="fa fa-key"></span></a>
+                }
             </div>
 
         </div>
@@ -65,7 +69,8 @@
                 }
                 else
                 {
-                    <a href="#" class="active"><span class="fa fa-address-book"></span>@Resources.Texts.MyAddresses</a>
+                    <a href="/Addresses" class="active"><span class="fa fa-address-book"></span>@Resources.Texts.MyAddresses</a>
+                    <a href="/Profile/ChangePassword" class="active"><span class="fa fa-key"></span>@Resources.Texts.ChangePassword</a>
                 }
 
             </div>

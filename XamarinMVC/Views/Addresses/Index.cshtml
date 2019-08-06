@@ -1,0 +1,53 @@
+﻿@model IEnumerable<XamarinMVC.Models.Address>
+
+@{
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Texts.MyAddresses;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.MyAddresses</h2>
+    <h2 class="pull-left">
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.NewAddresses, "Create", "", new { @class="btn btn-success"})
+    </h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressPostalCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressPostalCode)
+        </td>
+        <td>
+            @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id=item.Id }, new{@class="btn btn-xs btn-warning" }) |
+            @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id=item.Id }, new { @class = "btn btn-xs btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

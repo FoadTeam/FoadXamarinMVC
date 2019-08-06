@@ -1,0 +1,71 @@
+﻿@model IEnumerable<XamarinMVC.Models.User>
+
+@{
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Captions.Users;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Captions.Users</h2>
+    <h2 class="pull-left">
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.New, "Create", "", new { @class = "btn btn-success" })
+    </h2>
+</div>
+
+<div class="clearfix" style="margin-bottom:50px"></div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role.RoleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-warning" })
+            </td>
+        </tr>
+    }
+
+</table>

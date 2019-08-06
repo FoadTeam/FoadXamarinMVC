@@ -135,6 +135,9 @@
   <data name="MaxLength" xml:space="preserve">
     <value>نباید بیشتر از {1} کاراکتر باشد</value>
   </data>
+  <data name="OldPasswordIsIncurrect" xml:space="preserve">
+    <value>کلمه عبور قبلی را اشتباه وارد کرده اید</value>
+  </data>
   <data name="RepeatMobile" xml:space="preserve">
     <value>این موبایل قبلا ثبت شده</value>
   </data>

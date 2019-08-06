@@ -115,6 +115,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Old Password Is Incurrect.
+        /// </summary>
+        public static string OldPasswordIsIncurrect {
+            get {
+                return ResourceManager.GetString("OldPasswordIsIncurrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This Mobile is already registered.
         /// </summary>
         public static string RepeatMobile {

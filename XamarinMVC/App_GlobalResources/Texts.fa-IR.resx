@@ -126,8 +126,17 @@
   <data name="ActivisionCode" xml:space="preserve">
     <value>کد فعالسازی</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>بازگشت</value>
+  </data>
   <data name="BacktoList" xml:space="preserve">
     <value>بازگشت به لیست</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>تغییر</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغییر کلمه عبور</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>ثبت</value>
@@ -158,6 +167,9 @@
   </data>
   <data name="New" xml:space="preserve">
     <value>جدید</value>
+  </data>
+  <data name="NewAddresses" xml:space="preserve">
+    <value>آدرس جدید</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>ثبت نام</value>
