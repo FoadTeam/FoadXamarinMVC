@@ -88,6 +88,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Addresses.
+        /// </summary>
+        public static string Addresses {
+            get {
+                return ResourceManager.GetString("Addresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string Back {
@@ -255,6 +264,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         

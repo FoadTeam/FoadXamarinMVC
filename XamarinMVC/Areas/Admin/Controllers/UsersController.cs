@@ -16,14 +16,24 @@ namespace XamarinMVC.Areas.Admin.Controllers
         private DatabaseContext db = new DatabaseContext();
 
         // GET: Admin/Users
-        public ActionResult Index()
+        public ActionResult Index(string strsearch)
         {
-            var users = db.users.Include(u => u.Role);
+            var users = db.users.Include(u => u.Role).ToList();
+            if (!string.IsNullOrEmpty(strsearch))
+            {
+                users = users.Where(u => u.Mobile.Contains(strsearch)).ToList();
+            }
             return View(users.ToList());
         }
+        public ActionResult ShowAddress(int? id)
+        {
+            var address = db.Addresses.Where(u => u.User.Id == id);
+            return View(address);
+        }
 
-        // GET: Admin/Users/Create
-        public ActionResult Create()
+
+            // GET: Admin/Users/Create
+            public ActionResult Create()
         {
             ViewBag.RoleId = new SelectList(db.Roles, "Id", "RoleName");
             return View();
@@ -48,7 +58,8 @@ namespace XamarinMVC.Areas.Admin.Controllers
                         RoleId = user.RoleId,
                         Mobile = user.Mobile,
                         Password = FormsAuthentication.HashPasswordForStoringInConfigFile(user.Password, "MD5"),
-                        Code = mycode.ToString()
+                        Code = mycode.ToString(),
+                        UserName=user.UserName
                     };
                     db.users.Add(usr);
                     db.SaveChanges();
@@ -98,7 +109,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
                     usr.RoleId = user.RoleId;
                     usr.IsActive = user.IsActive;
 
-                    db.Entry(user).State = EntityState.Modified;
+                    //db.Entry(user).State = EntityState.Modified;
                     db.SaveChanges();
                 }
                 else

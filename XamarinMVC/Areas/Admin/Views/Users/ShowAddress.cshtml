@@ -1,0 +1,52 @@
+﻿@model IEnumerable<XamarinMVC.Models.Address>
+
+@{
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Captions.AddressText;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Captions.AddressText</h2>
+    <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "", new { @class = "btn btn-danger" })</h2>
+</div>
+
+<div class="clearfix" style="margin-bottom:50px"></div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.AddressPostalCode)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressCity)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressPostalCode)
+            </td>
+        </tr>
+    }
+
+</table>

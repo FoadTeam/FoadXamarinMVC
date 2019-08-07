@@ -126,6 +126,9 @@
   <data name="ActivisionCode" xml:space="preserve">
     <value>کد فعالسازی</value>
   </data>
+  <data name="Addresses" xml:space="preserve">
+    <value>آدرس ها</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>بازگشت</value>
   </data>
@@ -182,6 +185,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>جدید</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>جستجو</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>فرستادن</value>

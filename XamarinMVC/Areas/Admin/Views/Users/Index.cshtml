@@ -13,14 +13,23 @@
 </div>
 
 <div class="clearfix" style="margin-bottom:50px"></div>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div style="margin-bottom:30px">
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-8">
+                @Html.TextBox("strsearch", "", new { @class="form-control",placeholder=XamarinMVC.App_GlobalResources.Texts.Search+"..."})
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.Search</button>
+            </div>
+        </div>
+    }
+</div>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Role.RoleName)
+            @Html.DisplayNameFor(model => model.Role.RoleTitle)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserName)
@@ -28,23 +37,20 @@
         <th>
             @Html.DisplayNameFor(model => model.Mobile)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Code)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.IsActive)
         </th>
-        <th></th>
+        <th>
+            @XamarinMVC.App_GlobalResources.Texts.Action
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Role.RoleName)
+                @Html.DisplayFor(modelItem => item.Role.RoleTitle)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserName)
@@ -52,18 +58,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Mobile)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Code)
-            </td>
+          
             <td>
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-warning" })
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Addresses, "ShowAddress", new { id = item.Id }, new { @class = "btn-xs btn-danger" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn-xs btn-info" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn-xs btn-warning" })
             </td>
         </tr>
     }

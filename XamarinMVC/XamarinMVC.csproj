@@ -236,6 +236,7 @@
     <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\ShowAddress.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

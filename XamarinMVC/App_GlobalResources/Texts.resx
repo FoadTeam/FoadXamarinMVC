@@ -126,6 +126,9 @@
   <data name="ActivisionCode" xml:space="preserve">
     <value>Activision Code</value>
   </data>
+  <data name="Addresses" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
@@ -182,6 +185,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>

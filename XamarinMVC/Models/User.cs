@@ -25,6 +25,7 @@ namespace XamarinMVC.Models
 
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "Password")]
+        [DataType(DataType.Password)]
         [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         [Required(ErrorMessageResourceName = "Required",ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string Password { get; set; }
