@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+    @using XamarinMVC.Models;
+    @{
+        DatabaseContext db = new DatabaseContext();
+        var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+    }
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    @{
+        string dir = null;
+        switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+        {
+            case "en-US":
+                @Styles.Render("~/Content/SiteEN")
+                dir = "rtl";
+                break;
+            case "fa-IR":
+                @Styles.Render("~/Content/SiteFA")
+                dir = "ltr";
+                break;
+            default:
+                @Styles.Render("~/Content/SiteFA")
+                dir = "ltr";
+                break;
+        }
+        string fa = null;
+        string en = null;
+        if (dir == "ltr")
+        {
+            fa = "right";
+            en = "left";
+        }
+        else
+        {
+            fa = "left";
+            en = "right";
+        }
+    }
+</head>
+<body>
+    <div class="header">
+        <div class="topnav">
+            <div style="direction:@dir">
+                @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
+            </div>
+        </div>
+        <h2>@XamarinMVC.App_GlobalResources.Texts.OnlineStore</h2>
+    </div>
+    <div id="navbar" class="hidden-xs" style="z-index:1" >
+        <div class="navbar-@fa" style="margin-@fa:20px;">
+            <a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+            <a href="#">@XamarinMVC.App_GlobalResources.Texts.AboutUs</a>
+            <a href="#">@XamarinMVC.App_GlobalResources.Texts.ContactUs</a>
+        </div>
+        <div class="navbar-@en" style="margin-@en:20px; float:@en">
+            <a href="#"><span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
+        </div>
+    </div>
+    <div id="navbar" class="visible-xs" style="z-index:1">
+        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.AboutUs</a>
+        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.ContactUs</a>
+        <a href="#" style="float:none"> <span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
+    </div>
+
+    <div class="content" style="min-height:800px;">
+        @RenderBody()
+    </div>
+
+
+    @{
+        switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+        {
+            case "en-US":
+                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapEN")
+                break;
+            case "fa-IR":
+                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapFA")
+                break;
+            default:
+                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapFA")
+                break;
+        }
+    }
+    @Scripts.Render("~/bundles/SiteScript")
+    @RenderSection("Scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryui")
+
+
+</body>
+</html>

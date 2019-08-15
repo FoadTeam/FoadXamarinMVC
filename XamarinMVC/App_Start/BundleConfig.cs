@@ -60,7 +60,18 @@ namespace XamarinMVC.App_Start
                       "~/Content/bootstrap.min.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/AdminStyle.css"));
-            ////////////////////Admin/////////////////////////////////////
+            ////////////////////Admin/////////////////////////////////////\
+            ////////////////////Site/////////////////////////////
+            bundles.Add(new StyleBundle("~/Content/SiteFA").Include(
+                      "~/Content/bootstrap-rtl.min.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/SiteStyle-rtl.css"));
+
+            bundles.Add(new StyleBundle("~/Content/SiteEN").Include(
+                      "~/Content/bootstrap-rtl.min.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/SiteStyle.css"));
+            ////////////////////Site/////////////////////////////////////
             ///////////////////////////////Jquery//////////////////////////////
             bundles.Add(new ScriptBundle("~/bundles/BootStrapEN").Include(
                         "~/Scripts/bootstrap.js",
@@ -68,7 +79,9 @@ namespace XamarinMVC.App_Start
             bundles.Add(new ScriptBundle("~/bundles/BootStrapFA").Include(
                        "~/Scripts/bootstrap-rtl.min.js",
                       "~/Scripts/bootstrap.bundle.min.js"));
-            
+            bundles.Add(new ScriptBundle("~/bundles/SiteScript").Include(
+                       "~/Scripts/SiteScript.js"));
+
         }
     }
 }

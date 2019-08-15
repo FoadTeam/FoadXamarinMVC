@@ -19,7 +19,7 @@ namespace XamarinMVC.App_GlobalResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Texts {
@@ -57,6 +57,15 @@ namespace XamarinMVC.App_GlobalResources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
             }
         }
         
@@ -133,6 +142,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string ContactUs {
+            get {
+                return ResourceManager.GetString("ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         public static string Create {
@@ -187,6 +205,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home Page.
+        /// </summary>
+        public static string HomePage {
+            get {
+                return ResourceManager.GetString("HomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
@@ -228,6 +255,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string NewAddresses {
             get {
                 return ResourceManager.GetString("NewAddresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Online Store.
+        /// </summary>
+        public static string OnlineStore {
+            get {
+                return ResourceManager.GetString("OnlineStore", resourceCulture);
             }
         }
         
@@ -282,6 +318,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Send {
             get {
                 return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shopping Cart.
+        /// </summary>
+        public static string ShoppingCart {
+            get {
+                return ResourceManager.GetString("ShoppingCart", resourceCulture);
             }
         }
         

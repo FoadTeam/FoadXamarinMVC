@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
   <data name="Action" xml:space="preserve">
     <value>Action</value>
   </data>
@@ -141,6 +144,9 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Change Password</value>
   </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>
@@ -159,6 +165,9 @@
   <data name="ForgetPassword" xml:space="preserve">
     <value>Forget Password</value>
   </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -173,6 +182,9 @@
   </data>
   <data name="NewAddresses" xml:space="preserve">
     <value>New Addresses</value>
+  </data>
+  <data name="OnlineStore" xml:space="preserve">
+    <value>Online Store</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
@@ -191,6 +203,9 @@
   </data>
   <data name="Send" xml:space="preserve">
     <value>Send</value>
+  </data>
+  <data name="ShoppingCart" xml:space="preserve">
+    <value>Shopping Cart</value>
   </data>
   <data name="ShowSocialMedia" xml:space="preserve">
     <value>Show Social Media</value>

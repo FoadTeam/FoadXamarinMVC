@@ -1,0 +1,59 @@
+﻿@font-face {
+    font-family: 'IRANSansWeb';
+    src: url('../fonts/IRANSansWeb.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb.ttf') format('truetype'), url('../fonts/IRANSansWeb.woff') format('woff'), url('../fonts/IRANSansWeb_Bold.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb_Bold.ttf') format('truetype'), url('../fonts/IRANSansWeb_Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iranyekanwebregular';
+    src: url('../fonts/iranyekanwebregular.eot') format('embedded-opentype'), url('../fonts/iranyekanwebregular.ttf') format('truetype'), url('../fonts/iranyekanwebregular.woff') format('woff');
+}
+
+body {
+    direction: rtl;
+    background-color: white;
+    margin: auto;
+    font-family: iranyekanwebregular,IRANSansWeb,Tahoma;
+}
+
+.fa {
+    margin-left: 10px;
+}
+
+.header {
+    background-color: whitesmoke;
+    padding: 10px 30px;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #00ad5f;
+}
+
+    #navbar a {
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    .sticky + .content {
+        padding-top: 60px;
+    }

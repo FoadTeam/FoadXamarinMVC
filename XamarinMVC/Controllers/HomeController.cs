@@ -13,7 +13,7 @@ namespace XamarinMVC.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            db.Settings.ToList();
+            
             return View();
         }
 
