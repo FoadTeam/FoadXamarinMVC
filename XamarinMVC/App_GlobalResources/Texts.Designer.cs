@@ -160,6 +160,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Menu.
+        /// </summary>
+        public static string CreateMenu {
+            get {
+                return ResourceManager.GetString("CreateMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
@@ -228,6 +237,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string LoginForm {
             get {
                 return ResourceManager.GetString("LoginForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
             }
         }
         

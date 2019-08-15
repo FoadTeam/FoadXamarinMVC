@@ -246,4 +246,10 @@
   <data name="SocialOrder" xml:space="preserve">
     <value>ترتیب نمایش شبکه اجتماعی</value>
   </data>
+  <data name="NotShow" xml:space="preserve">
+    <value>نشان ندادن</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>ترتیب نمایش</value>
+  </data>
 </root>

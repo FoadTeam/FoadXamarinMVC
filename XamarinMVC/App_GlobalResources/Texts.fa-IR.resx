@@ -150,6 +150,9 @@
   <data name="Create" xml:space="preserve">
     <value>ثبت</value>
   </data>
+  <data name="CreateMenu" xml:space="preserve">
+    <value>ساخت منو</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>حذف</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="LoginForm" xml:space="preserve">
     <value>فرم ورود</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>منو</value>
   </data>
   <data name="MyAddresses" xml:space="preserve">
     <value>آدرس های من</value>

@@ -150,6 +150,9 @@
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>
+  <data name="CreateMenu" xml:space="preserve">
+    <value>Create Menu</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="LoginForm" xml:space="preserve">
     <value>Login Form</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
   </data>
   <data name="MyAddresses" xml:space="preserve">
     <value>My Addresses</value>
