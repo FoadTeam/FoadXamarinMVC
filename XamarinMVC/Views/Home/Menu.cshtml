@@ -1,0 +1,69 @@
+﻿@model IEnumerable<XamarinMVC.Models.Menu>
+
+@{
+    string fa = null;
+    string en = null;
+    string dir = null;
+    switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+    {
+        case "en-US":
+            dir = "rtl";
+            fa = "left";
+            en = "right";
+            break;
+        case "fa-IR":
+            dir = "ltr";
+            fa = "right";
+            en = "left";
+            break;
+        default:
+            dir = "ltr";
+            fa = "right";
+            en = "left";
+            break;
+    }
+
+
+}
+
+
+<div id="navbar" class="hidden-xs" style="z-index:1">
+    <div class="navbar-@fa" style="margin-@fa:20px;">
+        <a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+        @{
+            foreach (var item in Model)
+            {
+                if (dir == "rtl")
+                {
+                    <a href="/Home/ShowMenu/@item.Id" target="_blank">@item.NameEN</a>
+                }
+                else
+                {
+                    <a href="/Home/ShowMenu/@item.Id" target="_blank">@item.NameFA</a>
+                }
+
+            }
+        }
+    </div>
+    <div class="navbar-@en" style="margin-@en:20px; float:@en">
+        <a href="#"><span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
+    </div>
+</div>
+<div id="navbar" class="visible-xs" style="z-index:1">
+    <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+    @{
+        foreach (var item in Model)
+        {
+            if (dir == "rtl")
+            {
+                <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameEN</a>
+            }
+            else
+            {
+                <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameFA</a>
+            }
+
+        }
+    }
+    <a href="#" style="float:none"> <span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
+</div>

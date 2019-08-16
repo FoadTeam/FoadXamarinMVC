@@ -28,18 +28,7 @@
                 dir = "ltr";
                 break;
         }
-        string fa = null;
-        string en = null;
-        if (dir == "ltr")
-        {
-            fa = "right";
-            en = "left";
-        }
-        else
-        {
-            fa = "left";
-            en = "right";
-        }
+
     }
 </head>
 <body>
@@ -47,26 +36,21 @@
         <div class="topnav">
             <div style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
+                    <a href="/Profile/Dashboard">@XamarinMVC.App_GlobalResources.Texts.Dashboard</a>
+                }
+                else
+                {
+                    <a href="/Account/Register">@XamarinMVC.App_GlobalResources.Texts.Register</a>
+                    <a href="/Account/Login">@XamarinMVC.App_GlobalResources.Texts.Login</a>
+                }
             </div>
         </div>
         <h2>@XamarinMVC.App_GlobalResources.Texts.OnlineStore</h2>
     </div>
-    <div id="navbar" class="hidden-xs" style="z-index:1" >
-        <div class="navbar-@fa" style="margin-@fa:20px;">
-            <a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
-            <a href="#">@XamarinMVC.App_GlobalResources.Texts.AboutUs</a>
-            <a href="#">@XamarinMVC.App_GlobalResources.Texts.ContactUs</a>
-        </div>
-        <div class="navbar-@en" style="margin-@en:20px; float:@en">
-            <a href="#"><span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
-        </div>
-    </div>
-    <div id="navbar" class="visible-xs" style="z-index:1">
-        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
-        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.AboutUs</a>
-        <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.ContactUs</a>
-        <a href="#" style="float:none"> <span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:0</span></a>
-    </div>
+@Html.Action("Menu","Home")
 
     <div class="content" style="min-height:800px;">
         @RenderBody()

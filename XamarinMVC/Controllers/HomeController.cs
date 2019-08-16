@@ -16,6 +16,15 @@ namespace XamarinMVC.Controllers
             
             return View();
         }
-
+        public ActionResult Menu()
+        {
+            var menu = db.Menus.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
+            return PartialView(menu);
+        }
+        public ActionResult ShowMenu(int? id)
+        {
+            var menu = db.Menus.Find(id);
+            return View(menu);
+        }
     }
 }

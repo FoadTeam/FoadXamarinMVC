@@ -51,38 +51,38 @@ namespace XamarinMVC.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                try
-                {
-                    var readerIR = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                    var nodeIR = readerIR.GetEnumerator();
-                    var readerEN = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                    var nodeEN = readerEN.GetEnumerator();
-                    var writerIR = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                    var writerEN = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                    while (nodeIR.MoveNext())
-                    {
-                        writerIR.AddResource(nodeIR.Key.ToString(), nodeIR.Value.ToString());
-                    }
+                //try
+                //{
+                //    var readerIR = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
+                //    var nodeIR = readerIR.GetEnumerator();
+                //    var readerEN = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.resx"));
+                //    var nodeEN = readerEN.GetEnumerator();
+                //    var writerIR = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
+                //    var writerEN = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.resx"));
+                //    while (nodeIR.MoveNext())
+                //    {
+                //        writerIR.AddResource(nodeIR.Key.ToString(), nodeIR.Value.ToString());
+                //    }
                     
-                    while (nodeEN.MoveNext())
-                    {
-                        writerEN.AddResource(nodeEN.Key.ToString(), nodeEN.Value.ToString());
-                    }
-                    var newNodeIR = new ResXDataNode(menu.Name, menu.NameFA);
-                    writerIR.AddResource(newNodeIR);
-                    writerIR.Generate();
-                    writerIR.Close();
-                    var newNodeEN = new ResXDataNode(menu.Name, menu.NameEN);
-                    writerEN.AddResource(newNodeEN);
-                    writerEN.Generate();
-                    writerEN.Close();
+                //    while (nodeEN.MoveNext())
+                //    {
+                //        writerEN.AddResource(nodeEN.Key.ToString(), nodeEN.Value.ToString());
+                //    }
+                //    var newNodeIR = new ResXDataNode(menu.Name, menu.NameFA);
+                //    writerIR.AddResource(newNodeIR);
+                //    writerIR.Generate();
+                //    writerIR.Close();
+                //    var newNodeEN = new ResXDataNode(menu.Name, menu.NameEN);
+                //    writerEN.AddResource(newNodeEN);
+                //    writerEN.Generate();
+                //    writerEN.Close();
 
-                }
-                catch (Exception)
-                {
+                //}
+                //catch (Exception)
+                //{
 
-                    throw;
-                }
+                //    throw;
+                //}
 
 
                 db.Menus.Add(menu);
@@ -117,54 +117,6 @@ namespace XamarinMVC.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                try
-                {
-                    var readerIR = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                    var nodeIR = readerIR.GetEnumerator();
-                    var readerEN = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                    var nodeEN = readerEN.GetEnumerator();
-                    var writerIR = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                    var writerEN = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                    while (nodeIR.MoveNext())
-                    {
-                  
-                        if (nodeIR.Entry.Key.ToString() == menu.Name)
-                        {
-                            var newNodeIR = new ResXDataNode(menu.Name, menu.NameFA);
-                            writerIR.AddResource(newNodeIR);
-                        }
-                        else
-                        {
-                            writerIR.AddResource(nodeIR.Key.ToString(), nodeIR.Value.ToString());
-                        }
-                    }
-                    
-                    while (nodeEN.MoveNext())
-                    {
-                        if (nodeEN.Key.ToString() == menu.Name)
-                        {
-                            var newNodeEN = new ResXDataNode(menu.Name, menu.NameEN);
-                            writerEN.AddResource(newNodeEN);
-                        }
-                        else
-                        {
-                        writerEN.AddResource(nodeEN.Key.ToString(), nodeEN.Value.ToString());
-                        }
-
-                    }
-                    writerIR.Generate();
-                    writerIR.Close();
-                    writerEN.Generate();
-                    writerEN.Close();
-
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-
-
                 db.Entry(menu).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -175,45 +127,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
         // GET: Admin/Menus/Delete/5
         public ActionResult Delete(int? id)
         {
-            
-            
             Menu menu = db.Menus.Find(id);
-            try
-            {
-                var readerIR = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                var nodeIR = readerIR.GetEnumerator();
-                var readerEN = new ResXResourceReader(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                var nodeEN = readerEN.GetEnumerator();
-                var writerIR = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.fa-IR.resx"));
-                var writerEN = new ResXResourceWriter(Server.MapPath("~/App_GlobalResources/Menu.resx"));
-                while (nodeIR.MoveNext())
-                {
-
-                    if (nodeIR.Entry.Key.ToString() != menu.Name)
-                    {
-                        writerIR.AddResource(nodeIR.Key.ToString(), nodeIR.Value.ToString());
-                    }
-                }
-
-                while (nodeEN.MoveNext())
-                {
-                    if (nodeEN.Key.ToString() != menu.Name)
-                    {
-                        writerEN.AddResource(nodeEN.Key.ToString(), nodeEN.Value.ToString());
-                    }
-                }
-                writerIR.Generate();
-                writerIR.Close();
-                writerEN.Generate();
-                writerEN.Close();
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
             db.Menus.Remove(menu);
             db.SaveChanges();
             return RedirectToAction("Index");

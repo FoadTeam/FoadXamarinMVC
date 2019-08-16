@@ -1,0 +1,33 @@
+﻿@model XamarinMVC.Models.Menu
+
+@{
+    string dir = null;
+    switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+    {
+        case "en-US":
+            dir = "rtl";
+            break;
+        case "fa-IR":
+            dir = "ltr";
+            break;
+        default:
+            dir = "ltr";
+            break;
+    }
+}
+@{
+    if (dir == "rtl")
+    {
+        ViewBag.Title = Model.NameEN;
+    }
+    else
+    {
+        ViewBag.Title = Model.NameFA;
+    }
+    
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+    <h2>@ViewBag.Title</h2>
+
+@Html.Raw(Model.Des)
+
