@@ -205,11 +205,29 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English Name.
+        /// </summary>
+        public static string ENName {
+            get {
+                return ResourceManager.GetString("ENName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Factor Is Send.
         /// </summary>
         public static string FactorIsSend {
             get {
                 return ResourceManager.GetString("FactorIsSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farsi Name.
+        /// </summary>
+        public static string FAName {
+            get {
+                return ResourceManager.GetString("FAName", resourceCulture);
             }
         }
         

@@ -252,4 +252,10 @@
   <data name="Order" xml:space="preserve">
     <value>ترتیب نمایش</value>
   </data>
+  <data name="ENName" xml:space="preserve">
+    <value>نام انگلیسی</value>
+  </data>
+  <data name="FAName" xml:space="preserve">
+    <value>نام فارسی</value>
+  </data>
 </root>

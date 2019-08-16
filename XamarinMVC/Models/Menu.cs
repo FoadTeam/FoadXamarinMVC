@@ -17,6 +17,16 @@ namespace XamarinMVC.Models
         [MaxLength(40, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string Name { get; set; }
 
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "ENName")]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [MaxLength(40, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string NameEN { get; set; }
+
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "FAName")]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        [MaxLength(40, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        public string NameFA { get; set; }
+
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "NotShow")]
         public bool NotShow { get; set; }
 
