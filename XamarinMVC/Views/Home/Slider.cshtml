@@ -1,0 +1,19 @@
+﻿@model IEnumerable<XamarinMVC.Models.Slider>
+
+@{ 
+    bool IsActive = true;
+}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            @{
+                foreach (var item in Model)
+                {
+                    <div class="item @((IsActive)?"active":"")">
+                        <img src="~/Images/Slide/@item.Img" alt="@item.Title" />
+                    </div>
+
+                    IsActive = false;
+                }
+            }
+        </div>
+    </div>

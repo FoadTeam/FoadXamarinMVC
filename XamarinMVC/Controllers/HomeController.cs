@@ -26,5 +26,10 @@ namespace XamarinMVC.Controllers
             var menu = db.Menus.Find(id);
             return View(menu);
         }
+        public ActionResult Slider()
+        {
+            var slider = db.Sliders.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
+            return PartialView(slider);
+        }
     }
 }

@@ -258,4 +258,10 @@
   <data name="FAName" xml:space="preserve">
     <value>نام فارسی</value>
   </data>
+  <data name="ImageName" xml:space="preserve">
+    <value>نام عکس</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
 </root>

@@ -219,6 +219,9 @@
   <data name="ShowSocialMedia" xml:space="preserve">
     <value>نمایش شبکه های اجتماعی</value>
   </data>
+  <data name="Slider" xml:space="preserve">
+    <value>اسلایدر</value>
+  </data>
   <data name="SocialNetwork" xml:space="preserve">
     <value>شبکه اجتماعی</value>
   </data>

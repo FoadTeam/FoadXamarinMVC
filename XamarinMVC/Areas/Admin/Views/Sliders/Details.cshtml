@@ -1,0 +1,51 @@
+﻿@model XamarinMVC.Models.Slider
+
+@{
+    ViewBag.Title = XamarinMVC.App_GlobalResources.Texts.Details;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div>
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.Details : @Model.Title</h2>
+    <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "", new { @class = "btn btn-danger" })</h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotShow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotShow)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })
+</p>

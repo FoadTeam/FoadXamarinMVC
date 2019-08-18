@@ -4,21 +4,4 @@
     Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
-<h2>Index</h2>
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/Images/Slide/2_1203167_e.jpg" alt="Alternate Text" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Slide/domino-s-pizza.jpg" alt="Alternate Text" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Slide/fbc78dd7a643ade140c988eed2547226_featured_v2.jpg" alt="Alternate Text" />
-        </div>
-        <div class="item">
-            <img src="~/Images/Slide/hkdodco98dow2sfhm80i.jpg" alt="Alternate Text" />
-        </div>
-    </div>
-</div>
+@Html.Action("Slider","Home")

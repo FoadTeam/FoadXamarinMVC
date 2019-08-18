@@ -241,6 +241,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image Name.
+        /// </summary>
+        public static string ImageName {
+            get {
+                return ResourceManager.GetString("ImageName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Active.
         /// </summary>
         public static string IsActive {
@@ -471,6 +480,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Tell {
             get {
                 return ResourceManager.GetString("Tell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
         

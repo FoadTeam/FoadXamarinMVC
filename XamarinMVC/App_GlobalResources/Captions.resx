@@ -261,4 +261,10 @@
   <data name="FAName" xml:space="preserve">
     <value>Farsi Name</value>
   </data>
+  <data name="ImageName" xml:space="preserve">
+    <value>Image Name</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
 </root>

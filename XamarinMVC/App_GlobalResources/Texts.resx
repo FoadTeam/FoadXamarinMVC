@@ -219,6 +219,9 @@
   <data name="ShowSocialMedia" xml:space="preserve">
     <value>Show Social Media</value>
   </data>
+  <data name="Slider" xml:space="preserve">
+    <value>Slider</value>
+  </data>
   <data name="SocialNetwork" xml:space="preserve">
     <value>Social Network</value>
   </data>
