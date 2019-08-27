@@ -13,7 +13,6 @@ namespace XamarinMVC.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            
             return View();
         }
         public ActionResult Menu()
