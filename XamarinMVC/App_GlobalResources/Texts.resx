@@ -195,6 +195,9 @@
   <data name="OnlineStore" xml:space="preserve">
     <value>Online Store</value>
   </data>
+  <data name="ProductTypes" xml:space="preserve">
+    <value>Product Types</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
   </data>

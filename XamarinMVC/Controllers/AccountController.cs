@@ -64,7 +64,7 @@ namespace XamarinMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(!db.users.Any(x => x.Mobile == register.Mobile))
+                if(!db.Users.Any(x => x.Mobile == register.Mobile))
                 {
                     string hash = FormsAuthentication.HashPasswordForStoringInConfigFile(register.Password, "MD5");
                     Random rnd = new Random();
@@ -76,7 +76,7 @@ namespace XamarinMVC.Controllers
                         Password = hash,
                         Code = myrnd.ToString()
                     };
-                    db.users.Add(user);
+                    db.Users.Add(user);
                     db.SaveChanges();
                     SMSSender sms = new SMSSender();
                     sms.SendSMS(register.Mobile, XamarinMVC.App_GlobalResources.Texts.RegisterSMS+ Environment.NewLine + myrnd.ToString());
@@ -101,7 +101,7 @@ namespace XamarinMVC.Controllers
             if (ModelState.IsValid)
             {
                 string myhash = FormsAuthentication.HashPasswordForStoringInConfigFile(login.Password, "MD5");
-                var user = db.users.FirstOrDefault(m => m.Mobile ==login.Mobile && m.Password==myhash);
+                var user = db.Users.FirstOrDefault(m => m.Mobile ==login.Mobile && m.Password==myhash);
                 if(user != null)
                 {
                     FormsAuthentication.SetAuthCookie(login.Mobile, true);
@@ -141,7 +141,7 @@ namespace XamarinMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name && u.Code== activate.Code);
+                var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name && u.Code== activate.Code);
                 if(user != null)
                 {
                     Random rnd = new Random();
@@ -171,7 +171,7 @@ namespace XamarinMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = db.users.FirstOrDefault(u => u.Mobile == checkMobile.Mobile);
+                var user = db.Users.FirstOrDefault(u => u.Mobile == checkMobile.Mobile);
                 if(user != null)
                 {
                     SMSSender sms = new SMSSender();
@@ -200,7 +200,7 @@ namespace XamarinMVC.Controllers
             if (ModelState.IsValid)
             {
                 string myhash = FormsAuthentication.HashPasswordForStoringInConfigFile(forgetPassword.Password, "MD5");
-                var user = db.users.FirstOrDefault(u => u.Code == forgetPassword.Code);
+                var user = db.Users.FirstOrDefault(u => u.Code == forgetPassword.Code);
                 if(user != null)
                 {
                     Random rnd = new Random();

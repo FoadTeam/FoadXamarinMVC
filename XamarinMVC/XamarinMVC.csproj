@@ -1313,12 +1313,18 @@
     <Content Include="fonts\iranyekanwebregular.eot" />
     <Content Include="fonts\iranyekanwebregular.ttf" />
     <Content Include="fonts\iranyekanwebregular.woff" />
+    <Content Include="Images\Brand\181288-3.jpg" />
+    <Content Include="Images\Brand\527008-2.jpg" />
+    <Content Include="Images\Brand\810929-1.jpg" />
     <Content Include="Images\Site\active.jpg" />
     <Content Include="Images\Site\en.png" />
     <Content Include="Images\Site\fa.png" />
     <Content Include="Images\Site\foreign.jpg" />
     <Content Include="Images\Site\login.png" />
     <Content Include="Images\Site\register.png" />
+    <Content Include="Images\Slide\181288-3.jpg" />
+    <Content Include="Images\Slide\527008-2.jpg" />
+    <Content Include="Images\Slide\810929-1.jpg" />
     <Content Include="Scripts\bootstrap-rtl.js" />
     <Content Include="Scripts\bootstrap-rtl.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -1384,6 +1390,9 @@
     <Content Include="Areas\Admin\Views\Sliders\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Sliders\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Sliders\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Brands\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1484,6 +1493,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandsController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenusController.cs" />
     <Compile Include="Areas\Admin\Controllers\SlidersController.cs" />
@@ -1503,6 +1513,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModel.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Role.cs" />
@@ -1549,7 +1560,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Images\Gallery\" />
     <Folder Include="Images\Product\" />
-    <Folder Include="Images\Slide\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App_GlobalResources\Captions.resx">

@@ -18,7 +18,7 @@ namespace XamarinMVC.Controllers
         // GET: Addresses
         public ActionResult Index()
         {
-            var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
             if (user.IsActive == false)
             {
                 return RedirectToAction("Activate", "Account");
@@ -35,7 +35,7 @@ namespace XamarinMVC.Controllers
         // GET: Addresses/Create
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.users.Where(u => u.Mobile==User.Identity.Name), "Id", "UserName");
+            ViewBag.UserId = new SelectList(db.Users.Where(u => u.Mobile==User.Identity.Name), "Id", "UserName");
             return View();
         }
 
@@ -53,7 +53,7 @@ namespace XamarinMVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserId = new SelectList(db.users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
+            ViewBag.UserId = new SelectList(db.Users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
             return View(address);
         }
 
@@ -69,7 +69,7 @@ namespace XamarinMVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserId = new SelectList(db.users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
+            ViewBag.UserId = new SelectList(db.Users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
             return View(address);
         }
 
@@ -86,7 +86,7 @@ namespace XamarinMVC.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserId = new SelectList(db.users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
+            ViewBag.UserId = new SelectList(db.Users.Where(u => u.Mobile == User.Identity.Name), "Id", "UserName", address.UserId);
             return View(address);
         }
 

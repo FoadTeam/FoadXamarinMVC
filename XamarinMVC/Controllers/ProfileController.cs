@@ -15,7 +15,7 @@ namespace XamarinMVC.Controllers
         // GET: Profile
         public ActionResult Index()
         {
-            var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
             if (user.IsActive == false)
             {
                 return RedirectToAction("Activate", "Account");
@@ -36,7 +36,7 @@ namespace XamarinMVC.Controllers
         public ActionResult ChangePassword(ChangePasswordViewModel change)
         {
             string hashpass = FormsAuthentication.HashPasswordForStoringInConfigFile(change.OldPassword, "MD5");
-            var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name && u.Password == hashpass);
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name && u.Password == hashpass);
             if (user != null)
             {
                 user.Password = FormsAuthentication.HashPasswordForStoringInConfigFile(change.Password, "MD5");

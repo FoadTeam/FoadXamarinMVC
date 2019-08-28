@@ -19,7 +19,7 @@ namespace XamarinMVC.App_GlobalResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Texts {
@@ -291,6 +291,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string OnlineStore {
             get {
                 return ResourceManager.GetString("OnlineStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Types.
+        /// </summary>
+        public static string ProductTypes {
+            get {
+                return ResourceManager.GetString("ProductTypes", resourceCulture);
             }
         }
         

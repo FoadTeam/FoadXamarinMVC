@@ -18,7 +18,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
         // GET: Admin/Users
         public ActionResult Index(string strsearch)
         {
-            var users = db.users.Include(u => u.Role).ToList();
+            var users = db.Users.Include(u => u.Role).ToList();
             if (!string.IsNullOrEmpty(strsearch))
             {
                 users = users.Where(u => u.Mobile.Contains(strsearch)).ToList();
@@ -48,7 +48,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (!db.users.Any(u => u.Mobile == user.Mobile))
+                if (!db.Users.Any(u => u.Mobile == user.Mobile))
                 {
                     Random random = new Random();
                     int mycode = random.Next(100000, 999999);
@@ -61,7 +61,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
                         Code = mycode.ToString(),
                         UserName=user.UserName
                     };
-                    db.users.Add(usr);
+                    db.Users.Add(usr);
                     db.SaveChanges();
                 }
                 else
@@ -83,7 +83,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.users.Find(id);
+            User user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -101,9 +101,9 @@ namespace XamarinMVC.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (!db.users.Any(u => u.Id != user.Id && u.Mobile == user.Mobile))
+                if (!db.Users.Any(u => u.Id != user.Id && u.Mobile == user.Mobile))
                 {
-                    var usr = db.users.FirstOrDefault(u => u.Id == user.Id);
+                    var usr = db.Users.FirstOrDefault(u => u.Id == user.Id);
                     usr.Password = FormsAuthentication.HashPasswordForStoringInConfigFile(user.Password, "MD5");
                     usr.Mobile = user.Mobile;
                     usr.RoleId = user.RoleId;
@@ -125,8 +125,8 @@ namespace XamarinMVC.Areas.Admin.Controllers
         // GET: Admin/Users/Delete/5
         public ActionResult Delete(int? id)
         {
-            User user = db.users.Find(id);
-            db.users.Remove(user);
+            User user = db.Users.Find(id);
+            db.Users.Remove(user);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

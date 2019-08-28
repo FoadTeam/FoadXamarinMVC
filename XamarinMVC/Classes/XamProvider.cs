@@ -40,7 +40,7 @@ namespace XamarinMVC.Classes
         {
             using(DatabaseContext db=new DatabaseContext())
             {
-                return (from u in db.users
+                return (from u in db.Users
                         join r in db.Roles
                         on u.RoleId equals r.Id
                         where u.Mobile == username

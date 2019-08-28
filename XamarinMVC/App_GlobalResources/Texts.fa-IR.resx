@@ -195,6 +195,9 @@
   <data name="OnlineStore" xml:space="preserve">
     <value>فروشگاه اینترنتی</value>
   </data>
+  <data name="ProductTypes" xml:space="preserve">
+    <value>انواع محصولات</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>ثبت نام</value>
   </data>

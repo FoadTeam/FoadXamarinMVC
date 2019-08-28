@@ -57,3 +57,48 @@ body {
     .sticky + .content {
         padding-top: 60px;
     }
+ul{
+    padding:0;
+    list-style:none;
+}
+.slider{
+    padding-top:50px;
+    margin-left:10px;
+    margin-right:10px;
+    overflow:hidden;
+    position:relative;
+}
+.small2{
+    font-size:14px;
+    margin-top:50px;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+.small2 .small-ul{
+    display:flex;
+    position:absolute;
+    top:0;
+}
+.small2 .small-ul li{
+    margin-left:5px;
+    transition:width 1s ease-in-out;
+    margin-left:-4px;
+}
+.small2 .small-span{
+    position:absolute;
+    top:calc(50%-20px);
+    opacity:0.1;
+    cursor:pointer;
+    color:#fff;
+    text-shadow:1px 2px 10px rgba(0,0,0,1);
+}
+.small2 small-span :hover{
+    opacity:0.5;
+}
+.small2 .small-span:first-of-type{
+    right:10px;
+}
+.small2 .small-span:last-of-type{
+    left:10px;
+}

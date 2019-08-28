@@ -41,7 +41,7 @@ namespace XamarinMVC.Migrations
                     Password = MyHash ,
                     UserName = "Foad"
                 };
-                db.users.Add(user);
+                db.Users.Add(user);
                 db.SaveChanges();
 
                 Role role2 = new Role()

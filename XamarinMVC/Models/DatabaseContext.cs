@@ -13,11 +13,13 @@ namespace XamarinMVC.Models
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DatabaseContext,Migrations.Configuration>());
         }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<User> users { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Social> Socials { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+
     }
 }
