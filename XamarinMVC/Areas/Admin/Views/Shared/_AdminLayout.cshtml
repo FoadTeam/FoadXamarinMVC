@@ -5,7 +5,7 @@
     @using XamarinMVC.Models;
     @{ 
         DatabaseContext db = new DatabaseContext();
-        var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+        var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
     }
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,6 +68,7 @@
                     <a href="/Admin/Default/SiteSetting"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
                     <a href="/Admin/Default/CallSetting"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
                     <a href="/Admin/Socials"><span class="fa fa-users"></span>@Resources.Texts.SocialNetwork</a>
+                    <a href="/Admin/Brands" class="active"><span class="fa fa-list-ol"></span>@Resources.Texts.Brand</a>
                 }
                 else
                 {

@@ -1444,6 +1444,7 @@
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Home\ShowMenu.cshtml" />
     <Content Include="Views\Home\Slider.cshtml" />
+    <Content Include="Views\Home\Brand.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

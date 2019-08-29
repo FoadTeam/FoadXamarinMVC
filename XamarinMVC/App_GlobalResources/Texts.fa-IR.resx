@@ -138,6 +138,9 @@
   <data name="BacktoList" xml:space="preserve">
     <value>بازگشت به لیست</value>
   </data>
+  <data name="Brand" xml:space="preserve">
+    <value>برند</value>
+  </data>
   <data name="Change" xml:space="preserve">
     <value>تغییر</value>
   </data>

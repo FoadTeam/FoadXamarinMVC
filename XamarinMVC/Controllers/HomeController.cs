@@ -30,5 +30,10 @@ namespace XamarinMVC.Controllers
             var slider = db.Sliders.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
             return PartialView(slider);
         }
+        public ActionResult Brand()
+        {
+            var brand = db.Brands.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
+            return PartialView(brand);
+        }
     }
 }

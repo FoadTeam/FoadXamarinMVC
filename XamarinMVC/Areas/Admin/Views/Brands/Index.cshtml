@@ -5,11 +5,13 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.Slider</h2>
+    <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.New, "Create", "", new { @class = "btn btn-success" })</h2>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="clearfix" style="margin-bottom:50px"></div>
+
 <table class="table">
     <tr>
         <th>
@@ -27,26 +29,26 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NotShow)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src="~/Images/Brand/@item.Image" width="150" height="75" class="img-responsive" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotShow)
+            </td>
+            <td>
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>

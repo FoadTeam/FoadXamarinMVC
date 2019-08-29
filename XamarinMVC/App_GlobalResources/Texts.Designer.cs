@@ -124,6 +124,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Brand.
+        /// </summary>
+        public static string Brand {
+            get {
+                return ResourceManager.GetString("Brand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change.
         /// </summary>
         public static string Change {

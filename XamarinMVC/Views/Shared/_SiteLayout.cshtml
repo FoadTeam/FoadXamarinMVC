@@ -5,7 +5,7 @@
     @using XamarinMVC.Models;
     @{
         DatabaseContext db = new DatabaseContext();
-        var user = db.users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+        var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
     }
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
