@@ -30,12 +30,12 @@
 <div id="navbar" class="hidden-xs" style="z-index:1">
     <div class="navbar-@fa" style="margin-@fa:20px;">
         <a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+        
         <div class="dropdown">
-            <a>gtoups</a>
+            <a>@XamarinMVC.App_GlobalResources.Texts.Groups</a>
             <div class="dropdown-content">
-                <a href="#" style="color:#00ad5f">1</a>
-                <a href="#" style="color:#00ad5f">2</a>
-                <a href="#" style="color:#00ad5f">3</a>
+                @Html.Action("Group", "Home")
+                
             </div>
         </div>
         @{

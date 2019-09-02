@@ -1,0 +1,41 @@
+﻿@model IEnumerable<XamarinMVC.Models.Group>
+
+@{
+    string fa = null;
+    string en = null;
+    string dir = null;
+    switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+    {
+        case "en-US":
+            dir = "rtl";
+            fa = "left";
+            en = "right";
+            break;
+        case "fa-IR":
+            dir = "ltr";
+            fa = "right";
+            en = "left";
+            break;
+        default:
+            dir = "ltr";
+            fa = "right";
+            en = "left";
+            break;
+    }
+
+
+}
+@{
+    foreach (var item in Model)
+    {
+        if (dir == "rtl")
+        {
+            <a href="#" target="_blank" style="color:#00ad5f; float:none">@item.NameEN</a>
+        }
+        else
+        {
+            <a href="#" target="_blank" style="color:#00ad5f; float:none">@item.NameFA</a>
+        }
+
+    }
+}

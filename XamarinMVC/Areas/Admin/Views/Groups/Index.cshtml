@@ -1,0 +1,61 @@
+﻿@model IEnumerable<XamarinMVC.Models.Group>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.Groups</h2>
+    <h2 class="pull-left">
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.New, "Create", "", new { @class = "btn btn-success" })
+    </h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameFA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotShow)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameFA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotShow)
+            </td>
+            <td>
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

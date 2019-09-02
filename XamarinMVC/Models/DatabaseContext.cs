@@ -20,6 +20,7 @@ namespace XamarinMVC.Models
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Group> Groups { get; set; }
 
     }
 }

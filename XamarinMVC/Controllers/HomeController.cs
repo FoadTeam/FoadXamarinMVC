@@ -35,5 +35,10 @@ namespace XamarinMVC.Controllers
             var brand = db.Brands.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
             return PartialView(brand);
         }
+        public ActionResult Group()
+        {
+            var Group = db.Groups.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
+            return PartialView(Group);
+        }
     }
 }
