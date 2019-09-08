@@ -132,6 +132,9 @@
   <data name="Addresses" xml:space="preserve">
     <value>آدرس ها</value>
   </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>افزودن به سبد خرید</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>بازگشت</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="NewGroup" xml:space="preserve">
     <value>گروه جدید</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>موجود نیست</value>
   </data>
   <data name="OnlineStore" xml:space="preserve">
     <value>فروشگاه اینترنتی</value>

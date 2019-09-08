@@ -1396,6 +1396,10 @@
     <Content Include="Areas\Admin\Views\Groups\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Groups\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Groups\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1449,6 +1453,8 @@
     <Content Include="Views\Home\Slider.cshtml" />
     <Content Include="Views\Home\Brand.cshtml" />
     <Content Include="Views\Home\Group.cshtml" />
+    <Content Include="Views\Home\LastProduct.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1502,6 +1508,7 @@
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\GroupsController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SlidersController.cs" />
     <Compile Include="Areas\Admin\Controllers\SocialsController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
@@ -1523,6 +1530,7 @@
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\Slider.cs" />

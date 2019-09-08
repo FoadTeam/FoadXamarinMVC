@@ -40,5 +40,20 @@ namespace XamarinMVC.Controllers
             var Group = db.Groups.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
             return PartialView(Group);
         }
+
+        public ActionResult LastProduct()
+        {
+            var product = db.Products.Where(u => u.NotShow == false).OrderByDescending(u => u.Id).Take(4).ToList();
+            return PartialView(product);
+        }
+
+        [Route("Product/{id}/{title}")]
+        public ActionResult Product(int? id,string title)
+        {
+            var product = db.Products.Find(id);
+            product.Seen = +1;
+            db.SaveChanges();
+            return View(product);
+        }
     }
 }

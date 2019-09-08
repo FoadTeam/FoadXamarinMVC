@@ -132,6 +132,9 @@
   <data name="Addresses" xml:space="preserve">
     <value>Addresses</value>
   </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Add To Cart</value>
+  </data>
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="NewGroup" xml:space="preserve">
     <value>New Group</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>Not Available</value>
   </data>
   <data name="OnlineStore" xml:space="preserve">
     <value>Online Store</value>

@@ -1,0 +1,107 @@
+﻿@model XamarinMVC.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div>
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.Details : @Model.Name</h2>
+    <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "", new { @class = "btn btn-danger" })</h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Group.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Group.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameFA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameFA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/Images/Product/@Model.Image" alt="@Model.Image" height="200" width="200" class="img-responsive" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotShow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotShow)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = Model.Id }, new { @class = "btn btn-info" })
+</p>

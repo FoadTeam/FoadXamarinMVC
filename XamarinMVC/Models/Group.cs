@@ -33,5 +33,7 @@ namespace XamarinMVC.Models
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "NotShow")]
         public bool NotShow { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

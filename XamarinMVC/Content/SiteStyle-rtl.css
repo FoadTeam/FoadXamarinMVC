@@ -118,3 +118,44 @@ ul{
 .dropdown:hover .dropdown-content{
     display:block;
 }
+
+.container-img {
+    margin-top: 30px;
+}
+
+.image {
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.5);
+    width: 80%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.container-img:hover .overlay {
+    opacity: 1;
+}
+
+
+.title-color{
+    color:#00ad5f;
+}
+.red-text-color{
+    color:tomato;
+}
+.price-color{
+    color:darkgray;
+}
+.mg-top-40{
+    margin-top:40px;
+}

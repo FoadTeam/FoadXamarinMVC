@@ -241,6 +241,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Image.
+        /// </summary>
+        public static string Image {
+            get {
+                return ResourceManager.GetString("Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image Name.
         /// </summary>
         public static string ImageName {
@@ -340,6 +349,33 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string Products {
+            get {
+                return ResourceManager.GetString("Products", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RePassword.
         /// </summary>
         public static string RePassword {
@@ -372,6 +408,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string RoleTitle {
             get {
                 return ResourceManager.GetString("RoleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seen.
+        /// </summary>
+        public static string Seen {
+            get {
+                return ResourceManager.GetString("Seen", resourceCulture);
             }
         }
         

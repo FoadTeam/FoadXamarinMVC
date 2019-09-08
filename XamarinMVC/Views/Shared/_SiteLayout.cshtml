@@ -36,6 +36,7 @@
         <div class="topnav">
             <div style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
+                <hr />
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
