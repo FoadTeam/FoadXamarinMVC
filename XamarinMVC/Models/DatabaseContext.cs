@@ -22,6 +22,7 @@ namespace XamarinMVC.Models
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Gallery> Galleries { get; set; }
 
     }
 }

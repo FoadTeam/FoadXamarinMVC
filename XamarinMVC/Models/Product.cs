@@ -57,5 +57,6 @@ namespace XamarinMVC.Models
         [ForeignKey("BrandId")]
         public virtual Brand Brand { get; set; }
 
+        public virtual ICollection<Gallery> Galleries { get; set; }
     }
 }

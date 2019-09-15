@@ -1,0 +1,65 @@
+﻿@model IEnumerable<XamarinMVC.Models.Gallery>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Captions.Products</h2>
+    <h2 class="pull-left">
+
+        <a href="#" onclick='GalleryCreate(@ViewBag.myid)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.New</a>
+    </h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="~/Images/Gallery/@item.Image" width="150" height="75" class="img-responsive" />
+            </td>
+            <td>
+                @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="mymodalheader" class="modal-header">modallll</div>
+            <div id="bodymodal" class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap-rtl.min.js"></script>
+    <script>
+        function GalleryCreate(id) {
+            $.ajax({
+                url: "/Admin/Galleries/Create/" + id,
+                type: "Get",
+                data: {}
+            }).done(function (result) {
+                $('#mymodal').modal("show");
+                $('#mymodalheader').html('sabte');
+                $('#bodymodal').html(result);
+            });
+        }
+    </script>
+}

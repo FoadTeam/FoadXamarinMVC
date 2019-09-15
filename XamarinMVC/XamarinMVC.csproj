@@ -1400,6 +1400,8 @@
     <Content Include="Areas\Admin\Views\Products\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Galleries\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1506,6 +1508,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandsController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GalleriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\GroupsController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenusController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
@@ -1528,6 +1531,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Product.cs" />

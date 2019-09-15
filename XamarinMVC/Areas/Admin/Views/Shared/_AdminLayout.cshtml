@@ -43,7 +43,7 @@
                 {
                     <a href="/Profile/Index" style="font-size:20px">@Resources.Texts.UserPanel</a>
                 }
-                
+
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-inline" style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
@@ -86,6 +86,8 @@
     </div>
 
 
+
+
     @{
         switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
         {
@@ -100,9 +102,9 @@
                 break;
         }
     }
+
     @RenderSection("Scripts", required: false)
     @Scripts.Render("~/bundles/jqueryui")
-
 
 </body>
 </html>
