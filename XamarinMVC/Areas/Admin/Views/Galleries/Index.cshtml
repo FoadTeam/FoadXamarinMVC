@@ -6,11 +6,15 @@
 }
 
 <div style="margin-bottom:50px">
-    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Captions.Products</h2>
-    <h2 class="pull-left">
+    <h2 class="pull-right">
+        @XamarinMVC.App_GlobalResources.Captions.Products 
+         
 
+    </h2>
+    <h2 class="pull-left">
         <a href="#" onclick='GalleryCreate(@ViewBag.myid)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.New</a>
     </h2>
+    <h2 class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "Products", "", new { @class = "btn btn-danger" })</h2>
 </div>
 <div class="clearfix" style="margin-bottom:50px"></div>
 

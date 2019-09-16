@@ -27,7 +27,7 @@
 <div>
     @foreach (var item in Model)
     {
-    <div class="container-img col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div style="width:200px; height:200px;" class="container-img col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="/product/@item.Id/@item.Name.Replace(" ","-").Trim()" target="_blank"><img src="~/Images/Product/@item.Image" alt="@item.Image" class="image" /></a>
         @if (dir == "rtl")
         {

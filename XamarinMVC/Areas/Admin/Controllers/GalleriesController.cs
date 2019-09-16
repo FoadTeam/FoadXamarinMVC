@@ -17,6 +17,8 @@ namespace XamarinMVC.Areas.Admin.Controllers
         // GET: Admin/Galleries
         public ActionResult Index(int? id)
         {
+            //ViewBag.myName = db.Galleries.Where(u => u.Product.Id == id).Select(u => u.Product.Name).Single();
+            
             var galleries = db.Galleries.Where(u => u.ProductId == id).Include(g => g.Product);
             ViewBag.myid = id;
             return View(galleries.ToList());

@@ -17,7 +17,6 @@ namespace XamarinMVC.Models
         public int ProductId { get; set; }
 
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "Image")]
-        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         [MaxLength(50, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string Image { get; set; }
 
