@@ -1,4 +1,9 @@
 ﻿@model XamarinMVC.Models.Product
+@using XamarinMVC.Models
+@{ 
+    DatabaseContext db = new DatabaseContext();
+    var gallery = db.Galleries.Where(g => g.ProductId == Model.Id).ToList();
+}
 @{
     string fa = null;
     string en = null;
@@ -59,7 +64,14 @@
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+        @if (gallery.Count == 0)
+        {
         <img src="~/Images/Product/@Model.Image" alt="@Model.Image" width="300" height="300" class="img-responsive" style="margin:auto" />
+        }
+        else
+        {
+            @Html.Action("Gallery", "Home")
+        }
     </div>
 
 }
@@ -67,7 +79,14 @@ else
 {
 
     <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
-        <img src="~/Images/Product/@Model.Image" alt="@Model.Image" width="300" height="300" class="img-responsive" style="margin:auto" />
+        @if (gallery.Count == 0)
+        {
+            <img src="~/Images/Product/@Model.Image" alt="@Model.Image" width="300" height="300" class="img-responsive" style="margin:auto" />
+        }
+        else
+        {
+            @Html.Action("Gallery", "Home")
+        }
     </div>
 
 

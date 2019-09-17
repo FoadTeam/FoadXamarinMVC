@@ -1,0 +1,22 @@
+﻿@model IEnumerable<XamarinMVC.Models.Gallery>
+@{int counter = 1; }
+
+<div class="container col-lg-12 col-md-12 col-sm-12">
+    
+        @foreach (var item in Model)
+        {
+            <div class="mySlides">
+                <img src="~/Images/Gallery/@item.Image" alt="" style="width:80%" />
+            </div>
+        }
+            <div>
+                @foreach (var item in Model)
+                {
+                    <div class="column">
+                        <img src="~/Images/Gallery/@item.Image" alt="" style="width:100%;" onclick="currentSlides(@item.Id)" class="demo curser" />
+                    </div>
+                    counter += 1;
+                }
+            </div>
+   
+</div>

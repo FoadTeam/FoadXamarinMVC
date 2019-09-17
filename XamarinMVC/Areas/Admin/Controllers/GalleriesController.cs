@@ -17,9 +17,10 @@ namespace XamarinMVC.Areas.Admin.Controllers
         // GET: Admin/Galleries
         public ActionResult Index(int? id)
         {
-            //ViewBag.myName = db.Galleries.Where(u => u.Product.Id == id).Select(u => u.Product.Name).Single();
             
+
             var galleries = db.Galleries.Where(u => u.ProductId == id).Include(g => g.Product);
+            TempData["ID"] = id;
             ViewBag.myid = id;
             return View(galleries.ToList());
         }
@@ -65,7 +66,7 @@ namespace XamarinMVC.Areas.Admin.Controllers
             Gallery gallery = db.Galleries.Find(id);
             db.Galleries.Remove(gallery);
             db.SaveChanges();
-            return Redirect("/Admin/Galleries/Index/" + id);
+            return Redirect("/Admin/Galleries/Index/" + TempData["ID"]);
         }
 
 

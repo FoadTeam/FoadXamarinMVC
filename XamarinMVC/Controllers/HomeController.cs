@@ -55,5 +55,11 @@ namespace XamarinMVC.Controllers
             db.SaveChanges();
             return View(product);
         }
+
+        public ActionResult Gallery(int? id)
+        {
+            var gallery = db.Galleries.Where(u => u.ProductId == id).ToList();
+            return PartialView(gallery);
+        }
     }
 }

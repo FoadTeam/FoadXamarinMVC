@@ -171,3 +171,35 @@ ul {
 .mg-top-40 {
     margin-top: 40px;
 }
+
+
+
+
+img {
+    vertical-align: middle;
+}
+
+.container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.curser {
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+    .active, .demo :hover {
+        opacity: 1;
+    }
