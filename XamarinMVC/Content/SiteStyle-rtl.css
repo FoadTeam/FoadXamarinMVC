@@ -162,25 +162,31 @@ ul{
 
 
 
-img{
-    vertical-align:middle;
+img {
+    vertical-align: middle;
 }
-.container{
-  position:relative;   
+
+.container {
+    position: relative;
 }
-.mySlides{
-    display:none;
+
+.mySlides {
+    display: none;
 }
-.curser{
-    cursor:pointer;
+
+.curser {
+    cursor: pointer;
 }
-.column{
-    float:left;
-    width:16.66%;
+
+.column {
+    float: left;
+    width: 16.66%;
 }
-.demo{
-    opacity:0.6;
+
+.demo {
+    opacity: 0.6;
 }
-.active , .demo :hover{
-    opacity:1;
-}
+
+    .active, .demo:hover {
+        opacity: 1;
+    }
