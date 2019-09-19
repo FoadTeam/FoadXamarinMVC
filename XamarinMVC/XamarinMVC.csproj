@@ -1458,6 +1458,11 @@
     <Content Include="Views\Home\LastProduct.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Fields\Create.cshtml" />
+    <Content Include="Views\Fields\Delete.cshtml" />
+    <Content Include="Views\Fields\Details.cshtml" />
+    <Content Include="Views\Fields\Edit.cshtml" />
+    <Content Include="Views\Fields\Index.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1521,6 +1526,7 @@
     <Compile Include="Classes\XamProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
+    <Compile Include="Controllers\FieldsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1532,10 +1538,12 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Field.cs" />
     <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductField.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\Slider.cs" />

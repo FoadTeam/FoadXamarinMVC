@@ -285,4 +285,7 @@
   <data name="Gallery" xml:space="preserve">
     <value>گالری</value>
   </data>
+  <data name="FieldValue" xml:space="preserve">
+    <value>مقدار فیلد</value>
+  </data>
 </root>

@@ -288,4 +288,7 @@
   <data name="Gallery" xml:space="preserve">
     <value>Gallery</value>
   </data>
+  <data name="FieldValue" xml:space="preserve">
+    <value>Field Value</value>
+  </data>
 </root>

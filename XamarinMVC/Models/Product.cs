@@ -58,5 +58,7 @@ namespace XamarinMVC.Models
         public virtual Brand Brand { get; set; }
 
         public virtual ICollection<Gallery> Galleries { get; set; }
+
+        public ICollection<ProductField> productFields { get; set; }
     }
 }
