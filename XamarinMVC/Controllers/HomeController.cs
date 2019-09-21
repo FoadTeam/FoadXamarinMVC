@@ -61,5 +61,10 @@ namespace XamarinMVC.Controllers
             var gallery = db.Galleries.Where(u => u.ProductId == id).ToList();
             return PartialView(gallery);
         }
+        public ActionResult ShowFields(int? id)
+        {
+            var fields = db.ProductFields.Where(u => u.ProductId == id).ToList();
+            return PartialView(fields);
+        }
     }
 }

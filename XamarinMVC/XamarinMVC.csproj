@@ -1463,6 +1463,7 @@
     <Content Include="Views\Home\LastProduct.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\ShowFields.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

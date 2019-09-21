@@ -1,29 +1,21 @@
 ﻿@model XamarinMVC.Models.Product
 @using XamarinMVC.Models
-@{ 
+@{
     DatabaseContext db = new DatabaseContext();
     var gallery = db.Galleries.Where(g => g.ProductId == Model.Id).ToList();
 }
 @{
-    string fa = null;
-    string en = null;
     string dir = null;
     switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
     {
         case "en-US":
             dir = "rtl";
-            fa = "left";
-            en = "right";
             break;
         case "fa-IR":
             dir = "ltr";
-            fa = "right";
-            en = "left";
             break;
         default:
             dir = "ltr";
-            fa = "right";
-            en = "left";
             break;
     }
 
@@ -61,12 +53,19 @@
                 </h3>
             }
         </div>
+        <div class="clearfix"></div>
+        @Html.Action("ShowFields", "Home")
+        <div class="clearfix"></div>
+        <div class="mg-top-40">
+            @Html.Raw(Model.Description)
+        </div>
     </div>
+   
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         @if (gallery.Count == 0)
         {
-        <img src="~/Images/Product/@Model.Image" alt="@Model.Image" width="300" height="300" class="img-responsive" style="margin:auto" />
+            <img src="~/Images/Product/@Model.Image" alt="@Model.Image" width="300" height="300" class="img-responsive" style="margin:auto" />
         }
         else
         {
@@ -116,32 +115,42 @@ else
                 </h3>
             }
         </div>
-    </div>
-}
-    <div class="col-xs-12 visible-xs">
-        <h2 class="title-color">@Model.NameFA</h2>
+        <div class="clearfix"></div>
+        <hr />
         <br />
-        <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameFA / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
-        <br />
-        
-        <div>
-            @if (Model.Quantity == 0)
-            {
-                <h3 class="pull-left red-text-color">
-                    @XamarinMVC.App_GlobalResources.Texts.NotAvailable
-                </h3>
-                <h3 class="pull-right">
-                    <a href="#" class="btn btn-success disabled">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
-                </h3>
-            }
-            else
-            {
-                <h3 class="pull-right price-color">
-                    @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
-                </h3>
-                <h3 class="pull-left">
-                    <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
-                </h3>
-            }
+        @Html.Action("ShowFields", "Home")
+        <div class="clearfix"></div>
+        <div class="mg-top-40">
+            @Html.Raw(Model.Description)
         </div>
+
     </div>
+
+}
+<div class="col-xs-12 visible-xs">
+    <h2 class="title-color">@Model.NameFA</h2>
+    <br />
+    <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameFA / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
+    <br />
+
+    <div>
+        @if (Model.Quantity == 0)
+        {
+            <h3 class="pull-left red-text-color">
+                @XamarinMVC.App_GlobalResources.Texts.NotAvailable
+            </h3>
+            <h3 class="pull-right">
+                <a href="#" class="btn btn-success disabled">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
+            </h3>
+        }
+        else
+        {
+            <h3 class="pull-right price-color">
+                @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
+            </h3>
+            <h3 class="pull-left">
+                <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
+            </h3>
+        }
+    </div>
+</div>

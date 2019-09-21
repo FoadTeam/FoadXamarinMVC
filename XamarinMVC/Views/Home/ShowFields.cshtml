@@ -1,0 +1,91 @@
+﻿@model IEnumerable<XamarinMVC.Models.ProductField>
+
+@{
+    string dir = null;
+    switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+    {
+        case "en-US":
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Field.ENName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ENFieldValue)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Field.ENName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ENFieldValue)
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+
+            break;
+        case "fa-IR":
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Field.FAName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FAFieldValue)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Field.FAName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FAFieldValue)
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+            break;
+        default:
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Field.FAName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FAFieldValue)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Field.FAName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FAFieldValue)
+                        </td>
+
+                    </tr>
+                }
+
+            </table>
+            break;
+    }
+
+}
