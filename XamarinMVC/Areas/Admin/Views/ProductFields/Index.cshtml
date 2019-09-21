@@ -1,0 +1,84 @@
+﻿@model IEnumerable<XamarinMVC.Models.ProductField>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Captions.Field</h2>
+    <h2 class="pull-left">
+        <a href="#" onclick='FieldCreate(@ViewBag.myid)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.New </a>
+    </h2>
+    <h2 style="margin-left:50px;margin-right:50px"class="pull-left"> @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.BacktoList, "Index", "Products", "", new { @class = "btn btn-danger" })</h2>
+</div>
+
+<div class="clearfix" style="margin-bottom:50px"></div>
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Field.ENName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field.FAName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENFieldValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAFieldValue)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field.ENName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field.FAName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENFieldValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAFieldValue)
+        </td>
+        <td>
+            @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+    }
+
+</table>
+
+
+<div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="mymodalheader" class="modal-header">modallll</div>
+            <div id="bodymodal" class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap-rtl.min.js"></script>
+    <script>
+        function FieldCreate(id) {
+            $.ajax({
+                url: "/Admin/ProductFields/Create/" + id,
+                type: "Get",
+                data: {}
+            }).done(function (result) {
+                $('#mymodal').modal("show");
+                $('#mymodalheader').html('sabte');
+                $('#bodymodal').html(result);
+            });
+        }
+    </script>
+}

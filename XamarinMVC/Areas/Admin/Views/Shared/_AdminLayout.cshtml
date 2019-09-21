@@ -66,6 +66,7 @@
                     <a href="/Admin/Products"><span class="fa fa-list-ol"></span>@Resources.Captions.Products</a>
                     <a href="/Admin/Groups"><span class="fa fa-group"></span>@Resources.Texts.Groups</a>
                     <a href="/Admin/Sliders"><span class="fa fa-picture-o"></span>@Resources.Texts.Slider</a>
+                    <a href="/Admin/Fields"><span class="fa fa-file-excel-o"></span>@Resources.Captions.Field</a>
                     <a href="/Admin/Default/SMSEmailSetting"><span class="fa fa-mobile"></span>@Resources.Captions.SMSEmailSetting</a>
                     <a href="/Admin/Default/SiteSetting"><span class="fa fa-cogs"></span>@Resources.Captions.SiteSetting</a>
                     <a href="/Admin/Default/CallSetting"><span class="fa fa-phone"></span>@Resources.Captions.ContactSetting</a>
@@ -84,9 +85,6 @@
             @RenderBody()
         </div>
     </div>
-
-
-
 
     @{
         switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)

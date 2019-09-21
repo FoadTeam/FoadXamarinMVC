@@ -28,10 +28,10 @@
 <table class="table table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Brand.Title)
+            @Html.Label(XamarinMVC.App_GlobalResources.Texts.Brand)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Group.Name)
+            @Html.Label(XamarinMVC.App_GlobalResources.Texts.Groups)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -90,7 +90,8 @@
     <td>
         @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Edit, "Edit", new { id = item.Id }, new { @class = "btn btn-warning" }) |
         @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Details, "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
-        @Html.ActionLink(XamarinMVC.App_GlobalResources.Captions.Gallery, "Index","galleries", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Captions.Gallery, "Index", "galleries", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink(XamarinMVC.App_GlobalResources.Captions.ProductField, "Index", "ProductFields", new { id = item.Id }, new { @class = "btn btn-warning" }) |
         @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
     </td>
 </tr>

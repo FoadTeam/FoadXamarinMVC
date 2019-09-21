@@ -288,4 +288,19 @@
   <data name="FieldValue" xml:space="preserve">
     <value>مقدار فیلد</value>
   </data>
+  <data name="Field" xml:space="preserve">
+    <value>مشخصه</value>
+  </data>
+  <data name="FieldId" xml:space="preserve">
+    <value>آیدی مشخصه</value>
+  </data>
+  <data name="ProductField" xml:space="preserve">
+    <value>مشخصه محصولات</value>
+  </data>
+  <data name="ENFieldValue" xml:space="preserve">
+    <value>مقدار مشخصه انگلیسی</value>
+  </data>
+  <data name="FAFieldValue" xml:space="preserve">
+    <value>مقدار مشخصه فارسی</value>
+  </data>
 </root>

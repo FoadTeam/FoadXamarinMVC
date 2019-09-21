@@ -205,6 +205,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English Field Value.
+        /// </summary>
+        public static string ENFieldValue {
+            get {
+                return ResourceManager.GetString("ENFieldValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English Name.
         /// </summary>
         public static string ENName {
@@ -223,6 +232,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Farsi FieldValue.
+        /// </summary>
+        public static string FAFieldValue {
+            get {
+                return ResourceManager.GetString("FAFieldValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Farsi Name.
         /// </summary>
         public static string FAName {
@@ -237,6 +255,24 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Fax {
             get {
                 return ResourceManager.GetString("Fax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field.
+        /// </summary>
+        public static string Field {
+            get {
+                return ResourceManager.GetString("Field", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Id.
+        /// </summary>
+        public static string FieldId {
+            get {
+                return ResourceManager.GetString("FieldId", resourceCulture);
             }
         }
         
@@ -372,6 +408,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Field.
+        /// </summary>
+        public static string ProductField {
+            get {
+                return ResourceManager.GetString("ProductField", resourceCulture);
             }
         }
         

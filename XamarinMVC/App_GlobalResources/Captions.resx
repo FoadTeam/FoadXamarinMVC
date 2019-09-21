@@ -291,4 +291,19 @@
   <data name="FieldValue" xml:space="preserve">
     <value>Field Value</value>
   </data>
+  <data name="Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
+  <data name="FieldId" xml:space="preserve">
+    <value>Field Id</value>
+  </data>
+  <data name="ProductField" xml:space="preserve">
+    <value>Product Field</value>
+  </data>
+  <data name="ENFieldValue" xml:space="preserve">
+    <value>English Field Value</value>
+  </data>
+  <data name="FAFieldValue" xml:space="preserve">
+    <value>Farsi FieldValue</value>
+  </data>
 </root>

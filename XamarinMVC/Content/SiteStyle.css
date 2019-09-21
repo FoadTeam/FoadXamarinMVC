@@ -173,8 +173,6 @@ ul {
 }
 
 
-
-
 img {
     vertical-align: middle;
 }
@@ -192,7 +190,7 @@ img {
 }
 
 .column {
-    float: left;
+    float: right;
     width: 16.66%;
 }
 
