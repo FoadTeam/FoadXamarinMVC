@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using XamarinMVC.Models;
+using PagedList;
 
 namespace XamarinMVC.Controllers
 {
@@ -65,6 +66,14 @@ namespace XamarinMVC.Controllers
         {
             var fields = db.ProductFields.Where(u => u.ProductId == id).ToList();
             return PartialView(fields);
+        }
+        public ActionResult Filter(string StrSearch , int? page = 1)
+        {
+            var product = db.Products.Where(p => p.NotShow == false && (p.NameEN.Contains(StrSearch) || 
+            p.NameFA.Contains(StrSearch) || p.Group.NameEN.Contains(StrSearch) || p.Group.NameFA.Contains(StrSearch) ||
+            p.Brand.Title.Contains(StrSearch) || p.Description.Contains(StrSearch))).OrderByDescending(p => p.Id).ToList();
+           
+            return View(product.ToPagedList((int)page,16));
         }
     }
 }

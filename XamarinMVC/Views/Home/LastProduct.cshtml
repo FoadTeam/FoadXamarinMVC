@@ -1,24 +1,17 @@
 ﻿@model IEnumerable<XamarinMVC.Models.Product>
 @{
-    string fa = null;
-    string en = null;
+
     string dir = null;
     switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
     {
         case "en-US":
             dir = "rtl";
-            fa = "left";
-            en = "right";
             break;
         case "fa-IR":
             dir = "ltr";
-            fa = "right";
-            en = "left";
             break;
         default:
             dir = "ltr";
-            fa = "right";
-            en = "left";
             break;
     }
 

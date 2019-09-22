@@ -1,0 +1,50 @@
+﻿@*@model IEnumerable<XamarinMVC.Models.Product>*@
+@model PagedList.IPagedList<XamarinMVC.Models.Product>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Filter";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    string dir = null;
+    switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
+    {
+        case "en-US":
+            @Styles.Render("~/Content/SiteEN")
+            dir = "rtl";
+            break;
+        case "fa-IR":
+            @Styles.Render("~/Content/SiteFA")
+            dir = "ltr";
+            break;
+        default:
+            @Styles.Render("~/Content/SiteFA")
+            break;
+    }
+}
+
+<div>
+    @foreach (var item in Model)
+    {
+        if (dir == "rtl")
+        {
+            <div style="width:200px; height:200px;" class="pull-left container-img col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="/product/@item.Id/@item.Name.Replace(" ", "-").Trim()" target="_blank"><img src="~/Images/Product/@item.Image" alt="@item.Image" class="image" /></a>
+                <div class="overlay">@item.NameEN</div>
+            </div>
+        }
+        else
+        {
+            <div style="width:200px; height:200px;" class="pull-right container-img col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="/product/@item.Id/@item.Name.Replace(" ", "-").Trim()" target="_blank"><img src="~/Images/Product/@item.Image" alt="@item.Image" class="image" /></a>
+                <div class="overlay">@item.NameFA</div>
+            </div>
+        }
+
+
+    }
+</div>
+<div class="clearfix"></div>
+<div style="margin-top:30px;align-content:center;text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("Filter", new { page }))
+</div>
+

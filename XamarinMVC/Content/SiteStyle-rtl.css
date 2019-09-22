@@ -21,12 +21,14 @@ body {
 
 .header {
     background-color: whitesmoke;
-    padding: 10px 30px;
+    padding: 10px 10px;
 }
-
+.menus {
+    background-color: #293955;
+}
 #navbar {
     overflow: hidden;
-    background-color: #00ad5f;
+    background-color: #293955;
 }
 
     #navbar a {
@@ -106,14 +108,14 @@ ul{
     position:relative;
     display:inline-block;
 }
-.dropdown-content{
-    display:none;
-    position:fixed;
-    background-color:#f9f9f9;
-    min-width:160px;
-    box-shadow:0px 8px 16px 0px rgba(0 ,0 ,0 ,0.2);
-    padding:12px 16px;
-    z-index:101;
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #293955;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 101;
 }
 .dropdown:hover .dropdown-content{
     display:block;
@@ -190,3 +192,4 @@ img {
     .active, .demo:hover {
         opacity: 1;
     }
+

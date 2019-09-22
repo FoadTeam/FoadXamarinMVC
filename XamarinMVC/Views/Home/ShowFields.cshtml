@@ -1,17 +1,16 @@
 ﻿@model IEnumerable<XamarinMVC.Models.ProductField>
 
 @{
-    string dir = null;
     switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
     {
         case "en-US":
             <table class="table">
                 <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Field.ENName)
+                    <th style="text-align:left">
+                        @Html.Label(XamarinMVC.App_GlobalResources.Captions.Name)
                     </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ENFieldValue)
+                    <th style="text-align:left">
+                        @Html.Label(XamarinMVC.App_GlobalResources.Captions.FieldValue)
                     </th>
                     <th></th>
                 </tr>
@@ -36,10 +35,10 @@
             <table class="table">
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Field.FAName)
+                        @Html.Label(XamarinMVC.App_GlobalResources.Captions.Name)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.FAFieldValue)
+                        @Html.Label(XamarinMVC.App_GlobalResources.Captions.FieldValue)
                     </th>
                     <th></th>
                 </tr>

@@ -60,7 +60,7 @@
             @Html.Raw(Model.Description)
         </div>
     </div>
-   
+
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         @if (gallery.Count == 0)
@@ -153,4 +153,14 @@ else
             </h3>
         }
     </div>
+    <div class="clearfix"></div>
+    @Html.Action("ShowFields", "Home")
+    <div class="clearfix"></div>
+    <div class="mg-top-40">
+        @Html.Raw(Model.Description)
+    </div>
 </div>
+@section Scripts{
+
+    <script src="~/Scripts/GalleryScript.js"></script>
+}

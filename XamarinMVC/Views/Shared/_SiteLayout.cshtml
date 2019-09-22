@@ -25,35 +25,75 @@
                 break;
             default:
                 @Styles.Render("~/Content/SiteFA")
-                dir = "ltr";
                 break;
         }
 
     }
 </head>
 <body>
-    <div class="header">
-        <div class="topnav">
-            <div style="direction:@dir">
-                @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
-                <hr />
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
-                    <a href="/Profile/Dashboard">@XamarinMVC.App_GlobalResources.Texts.Dashboard</a>
-                }
-                else
-                {
-                    <a href="/Account/Register">@XamarinMVC.App_GlobalResources.Texts.Register</a>
-                    <a href="/Account/Login">@XamarinMVC.App_GlobalResources.Texts.Login</a>
-                }
-            </div>
-        </div>
-        <h2>@XamarinMVC.App_GlobalResources.Texts.OnlineStore</h2>
-    </div>
-@Html.Action("Menu","Home")
+    @{
+        if (dir == "ltr")
+        {
+            <div style="margin-top:10px;">
+               
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h2>@XamarinMVC.App_GlobalResources.Texts.OnlineStore</h2>
+                    </div>
+                    <div dir="@dir" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
+                        <br />
+                        <div>
+                            <form role="search" action="/Home/Filter" method="get">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    @Html.TextBox("StrSearch", "", new { @class = "form-control", @placeholder = "... " + XamarinMVC.App_GlobalResources.Texts.Search })
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                    <button type="submit" style="color:whitesmoke;background-color:#293955" class="btn">@XamarinMVC.App_GlobalResources.Texts.Search<span class="fa fa-search" style="margin-right:5px;"></span></button>
+                                </div>
+                            </form>
 
-    <div class="content" style="min-height:800px;">
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        }
+        else
+        {
+            <div style="margin-top:10px;">
+              
+
+                    <div dir="@dir" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
+                        <br />
+                        <div>
+                            <form role="search" action="/Home/Filter" method="get">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    @Html.TextBox("StrSearch", "", new { @class = "form-control", @placeholder = "... " + XamarinMVC.App_GlobalResources.Texts.Search })
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                    <button type="submit" style="color:whitesmoke;background-color:#293955" class="btn"><span class="fa fa-search" style="margin-left:5px;"></span>@XamarinMVC.App_GlobalResources.Texts.Search</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h2>@XamarinMVC.App_GlobalResources.Texts.OnlineStore</h2>
+                    </div>
+              
+            </div>
+        }
+    }
+
+    <div class="clearfix"></div>
+    <div class="topnav" style="margin-top:20px">
+        @Html.Action("Menu", "Home")
+    </div>
+
+
+    <div class="content" style="min-height:800px; background-color:#f5f5f5">
         @RenderBody()
     </div>
 
@@ -62,13 +102,13 @@
         switch (System.Threading.Thread.CurrentThread.CurrentUICulture.Name)
         {
             case "en-US":
-                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapEN")
+                @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/BootStrapEN")
                 break;
             case "fa-IR":
-                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapFA")
+                @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/BootStrapFA")
                 break;
             default:
-                @Scripts.Render("~/bundles/jquery","~/bundles/jqueryval", "~/bundles/BootStrapFA")
+                @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval", "~/bundles/BootStrapFA")
                 break;
         }
     }
