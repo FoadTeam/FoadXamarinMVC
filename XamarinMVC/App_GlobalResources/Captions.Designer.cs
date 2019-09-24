@@ -331,6 +331,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last Product.
+        /// </summary>
+        public static string LastProduct {
+            get {
+                return ResourceManager.GetString("LastProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mobile.
         /// </summary>
         public static string Mobile {
@@ -493,6 +502,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Seen Product.
+        /// </summary>
+        public static string SeenProduct {
+            get {
+                return ResourceManager.GetString("SeenProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Site Setting.
         /// </summary>
         public static string SiteSetting {
@@ -588,6 +606,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Submit {
             get {
                 return ResourceManager.GetString("Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Suggested Products.
+        /// </summary>
+        public static string SuggestedProducts {
+            get {
+                return ResourceManager.GetString("SuggestedProducts", resourceCulture);
             }
         }
         

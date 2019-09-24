@@ -306,4 +306,13 @@
   <data name="FAFieldValue" xml:space="preserve">
     <value>Farsi FieldValue</value>
   </data>
+  <data name="LastProduct" xml:space="preserve">
+    <value>Last Product</value>
+  </data>
+  <data name="SeenProduct" xml:space="preserve">
+    <value>Seen Product</value>
+  </data>
+  <data name="SuggestedProducts" xml:space="preserve">
+    <value>Suggested Products</value>
+  </data>
 </root>

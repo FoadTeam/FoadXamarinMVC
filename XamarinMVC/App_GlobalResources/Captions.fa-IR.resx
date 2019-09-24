@@ -303,4 +303,13 @@
   <data name="FAFieldValue" xml:space="preserve">
     <value>مقدار مشخصه فارسی</value>
   </data>
+  <data name="LastProduct" xml:space="preserve">
+    <value>آخرین محصولات</value>
+  </data>
+  <data name="SeenProduct" xml:space="preserve">
+    <value>پربازدیدترین ها</value>
+  </data>
+  <data name="SuggestedProducts" xml:space="preserve">
+    <value>محصولات پیشنهادی</value>
+  </data>
 </root>

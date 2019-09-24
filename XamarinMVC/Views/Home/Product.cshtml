@@ -59,6 +59,7 @@
         <div class="mg-top-40">
             @Html.Raw(Model.Description)
         </div>
+
     </div>
 
 
@@ -71,6 +72,13 @@
         {
             @Html.Action("Gallery", "Home")
         }
+    </div>
+    <div class="clearfix"></div>
+    <div class="mg-top-40">
+        <h2 class="text-center">@XamarinMVC.App_GlobalResources.Captions.SuggestedProducts</h2>
+        <div class="pull-left">
+            @Html.Action("RandomProduct", "Home", new { id = Model.Id, gid = Model.GroupId, bid = Model.BrandId })
+        </div>
     </div>
 
 }
@@ -124,6 +132,13 @@ else
             @Html.Raw(Model.Description)
         </div>
 
+    </div>
+    <div class="clearfix"></div>
+    <div class="mg-top-40">
+        <h2 class="text-center">@XamarinMVC.App_GlobalResources.Captions.SuggestedProducts</h2>
+        <div class="pull-right">
+            @Html.Action("RandomProduct", "Home", new { id = Model.Id, gid = Model.GroupId, bid = Model.BrandId })
+        </div>
     </div>
 
 }

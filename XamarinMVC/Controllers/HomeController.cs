@@ -41,10 +41,20 @@ namespace XamarinMVC.Controllers
             var Group = db.Groups.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
             return PartialView(Group);
         }
+        public ActionResult SeenProduct()
+        {
+            var product = db.Products.Where(u => u.NotShow == false).OrderByDescending(u => u.Seen).Take(4).ToList();
+            return PartialView(product);
+        }
 
         public ActionResult LastProduct()
         {
             var product = db.Products.Where(u => u.NotShow == false).OrderByDescending(u => u.Id).Take(4).ToList();
+            return PartialView(product);
+        }
+        public ActionResult RandomProduct(int? id , int? gid, int? bid)
+        {
+            var product = db.Products.Where(u => u.NotShow == false && u.Id != id && (u.GroupId == gid || u.BrandId== bid)).OrderBy(p => Guid.NewGuid()).Take(4).ToList();
             return PartialView(product);
         }
 
