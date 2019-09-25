@@ -60,5 +60,6 @@ namespace XamarinMVC.Models
         public virtual ICollection<Gallery> Galleries { get; set; }
 
         public ICollection<ProductField> productFields { get; set; }
+        public ICollection<FactorDetail> FactorDetails { get; set; }
     }
 }

@@ -312,4 +312,31 @@
   <data name="SuggestedProducts" xml:space="preserve">
     <value>محصولات پیشنهادی</value>
   </data>
+  <data name="Count" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="DetailPrice" xml:space="preserve">
+    <value>مبلغ واحد</value>
+  </data>
+  <data name="FactorDate" xml:space="preserve">
+    <value>تاریخ فاکتور</value>
+  </data>
+  <data name="FactorId" xml:space="preserve">
+    <value>آیدی فاکتور</value>
+  </data>
+  <data name="FactorNumber" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="IsPay" xml:space="preserve">
+    <value>پرداخت شده؟</value>
+  </data>
+  <data name="PayDate" xml:space="preserve">
+    <value>تاریخ پرداخت</value>
+  </data>
+  <data name="PayNumber" xml:space="preserve">
+    <value>شماره پیگیری</value>
+  </data>
+  <data name="PayTime" xml:space="preserve">
+    <value>زمان پرداخت</value>
+  </data>
 </root>

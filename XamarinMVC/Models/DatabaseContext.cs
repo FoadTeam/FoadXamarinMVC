@@ -25,6 +25,8 @@ namespace XamarinMVC.Models
         public DbSet<Gallery> Galleries { get; set; }
         public DbSet<Field> Fields { get; set; }
         public DbSet<ProductField> ProductFields { get; set; }
+        public DbSet<Factor> Factors { get; set; }
+        public DbSet<FactorDetail> FactorDetail { get; set; }
 
 
     }

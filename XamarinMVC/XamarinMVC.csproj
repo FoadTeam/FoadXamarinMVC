@@ -1551,6 +1551,8 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Factor.cs" />
+    <Compile Include="Models\FactorDetail.cs" />
     <Compile Include="Models\Field.cs" />
     <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Group.cs" />

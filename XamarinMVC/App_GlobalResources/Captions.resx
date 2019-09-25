@@ -315,4 +315,31 @@
   <data name="SuggestedProducts" xml:space="preserve">
     <value>Suggested Products</value>
   </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="DetailPrice" xml:space="preserve">
+    <value>Detail Price</value>
+  </data>
+  <data name="FactorDate" xml:space="preserve">
+    <value>Factor Date</value>
+  </data>
+  <data name="FactorId" xml:space="preserve">
+    <value>Factor Id</value>
+  </data>
+  <data name="FactorNumber" xml:space="preserve">
+    <value>Factor Number</value>
+  </data>
+  <data name="IsPay" xml:space="preserve">
+    <value>Is Pay?</value>
+  </data>
+  <data name="PayDate" xml:space="preserve">
+    <value>Pay Date</value>
+  </data>
+  <data name="PayNumber" xml:space="preserve">
+    <value>Pay Number</value>
+  </data>
+  <data name="PayTime" xml:space="preserve">
+    <value>Pay Time</value>
+  </data>
 </root>

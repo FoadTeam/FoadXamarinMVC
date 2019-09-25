@@ -142,11 +142,29 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Count.
+        /// </summary>
+        public static string Count {
+            get {
+                return ResourceManager.GetString("Count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detail Price.
+        /// </summary>
+        public static string DetailPrice {
+            get {
+                return ResourceManager.GetString("DetailPrice", resourceCulture);
             }
         }
         
@@ -223,11 +241,38 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Factor Date.
+        /// </summary>
+        public static string FactorDate {
+            get {
+                return ResourceManager.GetString("FactorDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Factor Id.
+        /// </summary>
+        public static string FactorId {
+            get {
+                return ResourceManager.GetString("FactorId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Factor Is Send.
         /// </summary>
         public static string FactorIsSend {
             get {
                 return ResourceManager.GetString("FactorIsSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Factor Number.
+        /// </summary>
+        public static string FactorNumber {
+            get {
+                return ResourceManager.GetString("FactorNumber", resourceCulture);
             }
         }
         
@@ -322,6 +367,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Pay?.
+        /// </summary>
+        public static string IsPay {
+            get {
+                return ResourceManager.GetString("IsPay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Key Words.
         /// </summary>
         public static string KeyWords {
@@ -403,11 +457,38 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pay Date.
+        /// </summary>
+        public static string PayDate {
+            get {
+                return ResourceManager.GetString("PayDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pay Is Send.
         /// </summary>
         public static string PayIsSend {
             get {
                 return ResourceManager.GetString("PayIsSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pay Number.
+        /// </summary>
+        public static string PayNumber {
+            get {
+                return ResourceManager.GetString("PayNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pay Time.
+        /// </summary>
+        public static string PayTime {
+            get {
+                return ResourceManager.GetString("PayTime", resourceCulture);
             }
         }
         

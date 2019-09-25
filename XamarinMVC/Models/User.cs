@@ -41,5 +41,7 @@ namespace XamarinMVC.Models
         public virtual Role Role { get; set; }
 
         public virtual ICollection<Address> Addresses { get; set; }
+
+        public virtual ICollection<Factor> Factors { get; set; }
     }
 }

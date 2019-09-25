@@ -25,12 +25,12 @@
     ViewBag.Title = Model.Name;
     Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
-@if (dir == "rtl")
+@if (dir == "ltr")
 {
     <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
-        <h2 class="title-color">@Model.NameEN</h2>
+        <h2 class="title-color">@Model.NameFA</h2>
         <br />
-        <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameEN / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
+        <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameFA / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
         <br />
 
         <div>
@@ -45,8 +45,8 @@
             }
             else
             {
-                <h3 class="pull-left price-color">
-                    @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") Rials
+                <h3  class="pull-left price-color">
+                    @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
                 </h3>
                 <h3 class="pull-right">
                     <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
@@ -98,9 +98,9 @@ else
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
-        <h2 class="title-color">@Model.NameFA</h2>
+        <h2 class="title-color">@Model.NameEN</h2>
         <br />
-        <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameFA / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
+        <h4>@XamarinMVC.App_GlobalResources.Texts.Groups : @Model.Group.NameEN / @XamarinMVC.App_GlobalResources.Texts.Brand : @Model.Brand.Title</h4>
         <br />
 
         <div>
@@ -115,8 +115,8 @@ else
             }
             else
             {
-                <h3 class="pull-right price-color">
-                    @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
+                <h3 style="font-family:Tahoma" class="pull-right price-color">
+                    @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") Rials
                 </h3>
                 <h3 class="pull-left">
                     <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
