@@ -1475,6 +1475,7 @@
     <Content Include="Views\Home\Filter.cshtml" />
     <Content Include="Views\Home\SeenProduct.cshtml" />
     <Content Include="Views\Home\RandomProduct.cshtml" />
+    <Content Include="Views\Profile\AddToShoppingCart.cshtml" />
     <None Include="Web References\SMSService\SendSMS.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

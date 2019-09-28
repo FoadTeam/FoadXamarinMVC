@@ -339,4 +339,7 @@
   <data name="PayTime" xml:space="preserve">
     <value>زمان پرداخت</value>
   </data>
+  <data name="DetailCount" xml:space="preserve">
+    <value>تعداد سفارش</value>
+  </data>
 </root>

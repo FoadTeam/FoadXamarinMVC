@@ -89,4 +89,9 @@ namespace XamarinMVC.Models
         [Compare("Password", ErrorMessageResourceName = "ComparePassword", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string RePassword { get; set; }
     }
+    public class ShoppingCartViewModel
+    {
+        [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "DetailCount")]
+        public int DetailCount { get; set; }
+    }
 }

@@ -45,11 +45,11 @@
             }
             else
             {
-                <h3  class="pull-left price-color">
+                <h3 class="pull-left price-color">
                     @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
                 </h3>
                 <h3 class="pull-right">
-                    <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
+                    <a href="#" onclick='AddToShoppingCart(@Model.Id)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
                 </h3>
             }
         </div>
@@ -119,7 +119,7 @@ else
                     @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") Rials
                 </h3>
                 <h3 class="pull-left">
-                    <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
+                    <a href="#" onclick='AddToShoppingCart(@Model.Id)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
                 </h3>
             }
         </div>
@@ -164,7 +164,7 @@ else
                 @XamarinMVC.App_GlobalResources.Captions.Price : @Model.Price.ToString("n0") ریال
             </h3>
             <h3 class="pull-left">
-                <a href="#" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
+                <a href="#" onclick='AddToShoppingCart(@Model.Id)' class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.AddToCart</a>
             </h3>
         }
     </div>
@@ -175,7 +175,36 @@ else
         @Html.Raw(Model.Description)
     </div>
 </div>
-@section Scripts{
 
+
+<div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="mymodalheader" class="modal-header">modallll</div>
+            <div id="bodymodal" class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap-rtl.min.js"></script>
+    <script>
+        function AddToShoppingCart(id) {
+            $.ajax({
+                url: "/Profile/AddToShoppingCart/" + id,
+                type: "Get",
+                data: {}
+            }).done(function (result) {
+                $('#mymodal').modal("show");
+                $('#mymodalheader').html('');
+                $('#bodymodal').html(result);
+            });
+        }
+    </script>
     <script src="~/Scripts/GalleryScript.js"></script>
 }

@@ -57,5 +57,72 @@ namespace XamarinMVC.Controllers
             }
             return View();
         }
+
+        public  ActionResult AddToShoppingCart(int id)
+        {
+            var prod = db.Products.Find(id);
+            ViewBag.myqty = prod.Quantity;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult AddToShoppingCart(ShoppingCartViewModel shoppingCart, int id)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var product = db.Products.Find(id);
+            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay== false);
+            if (factor != null)
+            {
+                var detail = db.FactorDetail.FirstOrDefault(d => d.FactorId==factor.Id && d.ProductId==id);
+                if (detail != null)
+                {
+                    detail.Count = shoppingCart.DetailCount + detail.Count;
+                    detail.DetailPrice = product.Price;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    FactorDetail factorDetail = new FactorDetail()
+                    {
+                        FactorId = factor.Id,
+                        ProductId = id,
+                        Count = shoppingCart.DetailCount,
+                        DetailPrice = product.Price
+                    };
+                    db.FactorDetail.Add(factorDetail);
+                    db.SaveChanges();
+                }
+               
+            }
+            else
+            {
+                Random random = new Random();
+                string str = random.Next(100000,999999).ToString();
+            
+                Factor newfactor = new Factor()
+                {
+                    UserId=user.Id,
+                    Date="",
+                    PayDate="",
+                    IsPay=false,
+                    Number=str,
+                    PayNumber="",
+                    PayTime="",
+                    Price=0
+                };
+                db.Factors.Add(newfactor);
+                db.SaveChanges();
+                FactorDetail factorDetail = new FactorDetail()
+                {
+                    FactorId = factor.Id,
+                    ProductId=id,
+                    Count = shoppingCart.DetailCount,
+                    DetailPrice = product.Price
+                };
+                db.FactorDetail.Add(factorDetail);
+                db.SaveChanges();
+            }
+            return PartialView(shoppingCart);
+        }
     }
 }

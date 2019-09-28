@@ -160,6 +160,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detail Count.
+        /// </summary>
+        public static string DetailCount {
+            get {
+                return ResourceManager.GetString("DetailCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Detail Price.
         /// </summary>
         public static string DetailPrice {

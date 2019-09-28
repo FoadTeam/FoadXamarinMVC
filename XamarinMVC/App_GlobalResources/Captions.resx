@@ -342,4 +342,7 @@
   <data name="PayTime" xml:space="preserve">
     <value>Pay Time</value>
   </data>
+  <data name="DetailCount" xml:space="preserve">
+    <value>Detail Count</value>
+  </data>
 </root>

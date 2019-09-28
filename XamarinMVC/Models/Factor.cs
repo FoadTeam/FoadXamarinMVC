@@ -20,7 +20,7 @@ namespace XamarinMVC.Models
         [MaxLength(20, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string Number { get; set; }
 
-        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
+        
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "FactorDate")]
         [MaxLength(15, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public string Date { get; set; }
