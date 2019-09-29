@@ -124,5 +124,20 @@ namespace XamarinMVC.Controllers
             }
             return PartialView(shoppingCart);
         }
+        public ActionResult ShoppingCart()
+        {
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay == false);
+            if (factor != null)
+            {
+                var detail = db.FactorDetail.Where(d => d.FactorId == factor.Id).ToList();
+                return View(detail);
+            }
+            else
+            {
+                Response.Write("شما کالایی ثبت نام نکرده اید");
+            }
+            return View();
+        }
     }
 }

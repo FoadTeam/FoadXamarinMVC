@@ -1,0 +1,49 @@
+﻿@model IEnumerable<XamarinMVC.Models.FactorDetail>
+
+@{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-bottom:50px">
+    <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart</h2>
+</div>
+<div class="clearfix" style="margin-bottom:50px"></div>
+<hr />
+<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Products.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Products.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+
+                <td>
+                    @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Delete, "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </tr>
+        }
+
+    </table>
+
+
+</div>

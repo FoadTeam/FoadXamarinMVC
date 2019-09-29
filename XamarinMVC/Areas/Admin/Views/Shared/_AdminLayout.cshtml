@@ -47,8 +47,6 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-inline" style="direction:@dir">
                 @Html.Partial("~/Views/Partials/_LanguagePartial.cshtml")
-
-                <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
                 <a href="/"><span class="fa fa-eye"></span></a>
                 @if (user.Role.RoleName == "Admin")
                 {
@@ -76,7 +74,8 @@
                 else
                 {
                     <a href="/Addresses" class="active"><span class="fa fa-address-book"></span>@Resources.Texts.MyAddresses</a>
-                    <a href="/Profile/ChangePassword" class="active"><span class="fa fa-key"></span>@Resources.Texts.ChangePassword</a>
+                    <a href="/Profile/ChangePassword"><span class="fa fa-key"></span>@Resources.Texts.ChangePassword</a>
+                    <a href="/Profile/ShoppingCart"><span class="fa fa-shopping-cart"></span>@Resources.Texts.ShoppingCart</a>
                 }
 
             </div>
