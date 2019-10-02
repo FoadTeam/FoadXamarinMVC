@@ -1,0 +1,16 @@
+﻿@using XamarinMVC.Classes;
+@{
+    ViewBag.Title = "RedirectVPOS";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <h3>@XamarinMVC.App_GlobalResources.Texts.AcceptAndPay</h3>
+    <br />
+    <h4 class="text-center">@XamarinMVC.App_GlobalResources.Texts.PaymentFromBankMellat</h4>
+    <br />
+    <form method="post" name="formBank" id="formBank" action="@BankMellat.PgwSite">
+        <input type="hidden" value="@ViewBag.id" id="RefId" name="RefId" />
+        <input type="submit" value="@XamarinMVC.App_GlobalResources.Texts.Pay" />
+    </form>
+</div>

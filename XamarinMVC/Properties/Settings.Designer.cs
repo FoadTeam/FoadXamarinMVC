@@ -32,5 +32,15 @@ namespace XamarinMVC.Properties {
                 return ((string)(this["XamarinMVC_SMSService_SendSMS"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://bpm.shaparak.ir/pgwchannel/services/pgw")]
+        public string XamarinMVC_BankMellatService_PaymentGatewayImplService {
+            get {
+                return ((string)(this["XamarinMVC_BankMellatService_PaymentGatewayImplService"]));
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace XamarinMVC.App_GlobalResources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Texts {
@@ -66,6 +66,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string AboutUs {
             get {
                 return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accept And Pay.
+        /// </summary>
+        public static string AcceptAndPay {
+            get {
+                return ResourceManager.GetString("AcceptAndPay", resourceCulture);
             }
         }
         
@@ -340,6 +349,33 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pay.
+        /// </summary>
+        public static string Pay {
+            get {
+                return ResourceManager.GetString("Pay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment From Bank Mellat.
+        /// </summary>
+        public static string PaymentFromBankMellat {
+            get {
+                return ResourceManager.GetString("PaymentFromBankMellat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment Result.
+        /// </summary>
+        public static string PaymentResult {
+            get {
+                return ResourceManager.GetString("PaymentResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product Types.
         /// </summary>
         public static string ProductTypes {
@@ -448,11 +484,29 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sum.
+        /// </summary>
+        public static string Sum {
+            get {
+                return ResourceManager.GetString("Sum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User Panel.
         /// </summary>
         public static string UserPanel {
             get {
                 return ResourceManager.GetString("UserPanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Factor.
+        /// </summary>
+        public static string ViewFactor {
+            get {
+                return ResourceManager.GetString("ViewFactor", resourceCulture);
             }
         }
     }

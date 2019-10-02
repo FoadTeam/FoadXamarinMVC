@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "ShowError";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <h3 class="text-center">@XamarinMVC.App_GlobalResources.Texts.PaymentResult</h3>]
+    <br />
+    @{ 
+        if (TempData.Peek("Message") != null)
+        {
+            <h4 class="text-center">@TempData.Peek("Message")</h4>
+        }
+    }
+</div>
+

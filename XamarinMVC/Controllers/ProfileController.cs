@@ -58,7 +58,7 @@ namespace XamarinMVC.Controllers
             return View();
         }
 
-        public  ActionResult AddToShoppingCart(int id)
+        public ActionResult AddToShoppingCart(int id)
         {
             var prod = db.Products.Find(id);
             ViewBag.myqty = prod.Quantity;
@@ -70,10 +70,10 @@ namespace XamarinMVC.Controllers
         {
             var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
             var product = db.Products.Find(id);
-            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay== false);
+            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay == false);
             if (factor != null)
             {
-                var detail = db.FactorDetail.FirstOrDefault(d => d.FactorId==factor.Id && d.ProductId==id);
+                var detail = db.FactorDetail.FirstOrDefault(d => d.FactorId == factor.Id && d.ProductId == id);
                 if (detail != null)
                 {
                     detail.Count = shoppingCart.DetailCount + detail.Count;
@@ -92,37 +92,38 @@ namespace XamarinMVC.Controllers
                     db.FactorDetail.Add(factorDetail);
                     db.SaveChanges();
                 }
-               
+
             }
             else
             {
                 Random random = new Random();
-                string str = random.Next(100000,999999).ToString();
-            
+                string str = random.Next(100000, 999999).ToString();
+
                 Factor newfactor = new Factor()
                 {
-                    UserId=user.Id,
-                    Date="",
-                    PayDate="",
-                    IsPay=false,
-                    Number=str,
-                    PayNumber="",
-                    PayTime="",
-                    Price=0
+                    UserId = user.Id,
+                    Date = "",
+                    PayDate = "",
+                    IsPay = false,
+                    Number = str,
+                    PayNumber = "",
+                    PayTime = "",
+                    Price = 0
                 };
                 db.Factors.Add(newfactor);
                 db.SaveChanges();
                 FactorDetail factorDetail = new FactorDetail()
                 {
                     FactorId = factor.Id,
-                    ProductId=id,
+                    ProductId = id,
                     Count = shoppingCart.DetailCount,
                     DetailPrice = product.Price
                 };
                 db.FactorDetail.Add(factorDetail);
                 db.SaveChanges();
             }
-            return PartialView(shoppingCart);
+            return Redirect("/product/"+id+"/"+product.Name );
+
         }
         public ActionResult ShoppingCart()
         {
@@ -131,13 +132,49 @@ namespace XamarinMVC.Controllers
             if (factor != null)
             {
                 var detail = db.FactorDetail.Where(d => d.FactorId == factor.Id).ToList();
-                return View(detail);
+                if (detail.Count > 0)
+                {
+                    return View(detail);
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
+
             }
             else
             {
-                Response.Write("شما کالایی ثبت نام نکرده اید");
+                return RedirectToAction("Index");
+            }
+
+        }
+        public ActionResult DeleteSHhoppingList(int? id)
+        {
+            var factordetail = db.FactorDetail.Find(id);
+            db.FactorDetail.Remove(factordetail);
+            db.SaveChanges();
+            return RedirectToAction("ShoppingCart");
+        }
+        public ActionResult ShowFactors()
+        {
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay == false);
+            if (factor != null)
+            {
+                var detail = db.FactorDetail.Where(d => d.FactorId == factor.Id).ToList();
+                if (detail.Count > 0)
+                {
+                    return View(detail);
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
+
             }
             return View();
         }
+
+
     }
 }

@@ -249,4 +249,22 @@
   <data name="UserPanel" xml:space="preserve">
     <value>User Panel</value>
   </data>
+  <data name="ViewFactor" xml:space="preserve">
+    <value>View Factor</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="AcceptAndPay" xml:space="preserve">
+    <value>Accept And Pay</value>
+  </data>
+  <data name="PaymentFromBankMellat" xml:space="preserve">
+    <value>Payment From Bank Mellat</value>
+  </data>
+  <data name="PaymentResult" xml:space="preserve">
+    <value>Payment Result</value>
+  </data>
 </root>

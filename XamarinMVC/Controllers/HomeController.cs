@@ -18,6 +18,18 @@ namespace XamarinMVC.Controllers
         }
         public ActionResult Menu()
         {
+            int MyCount = 0;
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+                var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay == false);
+                if (factor != null)
+                {
+                    var factordetail = db.FactorDetail.Where(d => d.FactorId == factor.Id).ToList();
+                    MyCount = factordetail.Count();
+                }
+            }
+            ViewBag.CountShoppingCart = MyCount;
             var menu = db.Menus.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();
             return PartialView(menu);
         }
@@ -26,6 +38,7 @@ namespace XamarinMVC.Controllers
             var menu = db.Menus.Find(id);
             return View(menu);
         }
+
         public ActionResult Slider()
         {
             var slider = db.Sliders.Where(u => u.NotShow == false).OrderBy(u => u.Order).ToList();

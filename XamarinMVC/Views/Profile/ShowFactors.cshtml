@@ -1,0 +1,85 @@
+﻿@model IEnumerable<XamarinMVC.Models.FactorDetail>
+@{
+    ViewBag.Title = "ShowFactors";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+    double Total = 0;
+    string font = null;
+}
+
+@if (System.Threading.Thread.CurrentThread.CurrentUICulture.Name == "fa-IR")
+{
+
+    <div style="margin-bottom:50px">
+        <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.ViewFactor</h2>
+        <h2 class="pull-left"><a href="/Payment/Index/" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.Pay</a></h2>
+
+    </div>
+}
+else
+{
+    font = "Tahoma";
+    <div style="margin-bottom:50px;margin-top:20px;">
+        <h2 class="pull-left">@XamarinMVC.App_GlobalResources.Texts.ViewFactor</h2>
+        <h2 class="pull-right"><a href="/Payment/Index/" class="btn btn-success">@XamarinMVC.App_GlobalResources.Texts.Pay</a></h2>
+
+    </div>
+}
+
+
+<div class="clearfix" style="margin-bottom:50px"></div>
+
+<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <table class="table table-hover" style="font-family: @font">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Products.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+            <th>
+                @XamarinMVC.App_GlobalResources.Texts.Sum
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            int SumPrice = 0;
+            SumPrice = Convert.ToInt32(item.Count * item.Products.Price);
+            Total += SumPrice;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Products.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Products.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    <p>@SumPrice.ToString("n0")</p>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    <br />
+    @if (System.Threading.Thread.CurrentThread.CurrentUICulture.Name == "fa-IR")
+    {
+        <h4 class="pull-left" style="font-family: @font">
+            @XamarinMVC.App_GlobalResources.Texts.Sum : @Total.ToString("n0")
+        </h4>
+    }
+    else
+    {
+        <h4 class="pull-right" style="font-family: @font">
+            @XamarinMVC.App_GlobalResources.Texts.Sum : @Total.ToString("n0")
+        </h4>
+    }
+</div>

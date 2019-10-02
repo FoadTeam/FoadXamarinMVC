@@ -249,4 +249,22 @@
   <data name="UserPanel" xml:space="preserve">
     <value>پنل کاربری</value>
   </data>
+  <data name="ViewFactor" xml:space="preserve">
+    <value>نمایش فاکتور</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>پرداخت</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>جمع</value>
+  </data>
+  <data name="AcceptAndPay" xml:space="preserve">
+    <value>تایید و پرداخت</value>
+  </data>
+  <data name="PaymentFromBankMellat" xml:space="preserve">
+    <value>پرداخت از طریق بانک ملت</value>
+  </data>
+  <data name="PaymentResult" xml:space="preserve">
+    <value>نتیجه تراکنش</value>
+  </data>
 </root>
