@@ -342,4 +342,7 @@
   <data name="DetailCount" xml:space="preserve">
     <value>تعداد سفارش</value>
   </data>
+  <data name="Factor" xml:space="preserve">
+    <value>فاکتور</value>
+  </data>
 </root>

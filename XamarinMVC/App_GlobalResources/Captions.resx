@@ -345,4 +345,7 @@
   <data name="DetailCount" xml:space="preserve">
     <value>Detail Count</value>
   </data>
+  <data name="Factor" xml:space="preserve">
+    <value>Factor</value>
+  </data>
 </root>

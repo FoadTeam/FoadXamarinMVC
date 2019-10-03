@@ -1416,6 +1416,8 @@
     <Content Include="Areas\Admin\Views\Fields\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ProductFields\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ProductFields\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Factors\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Factors\ShowDetails.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1539,6 +1541,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandsController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FactorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\FieldsController.cs" />
     <Compile Include="Areas\Admin\Controllers\GalleriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\GroupsController.cs" />
