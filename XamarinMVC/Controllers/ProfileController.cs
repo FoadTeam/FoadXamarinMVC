@@ -12,6 +12,24 @@ namespace XamarinMVC.Controllers
     public class ProfileController : Controller
     {
         DatabaseContext db = new DatabaseContext();
+
+        public ActionResult ShowAddress()
+        {
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var address = db.Addresses.Where(u => u.UserId == user.Id).ToList();
+
+            ViewBag.AddressId = new SelectList(address, "Id", "AddressText");
+            return PartialView(address);
+        }
+        public ActionResult UpdateAddress(int? id)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
+            var factor = db.Factors.FirstOrDefault(f => f.UserId == user.Id && f.IsPay == false);
+            factor.AddressId = id;
+            db.SaveChanges();
+            return RedirectToAction("ShoppingCart");
+        }
+
         // GET: Profile
         public ActionResult Index()
         {
@@ -99,6 +117,13 @@ namespace XamarinMVC.Controllers
                 Random random = new Random();
                 string str = random.Next(100000, 999999).ToString();
 
+                var address = db.Addresses.FirstOrDefault(a => a.UserId == user.Id);
+                int addressId = 0;
+                if (address != null)
+                {
+                    addressId = address.Id;
+                }
+
                 Factor newfactor = new Factor()
                 {
                     UserId = user.Id,
@@ -108,13 +133,14 @@ namespace XamarinMVC.Controllers
                     Number = str,
                     PayNumber = "",
                     PayTime = "",
-                    Price = 0
+                    Price = 0,
+                    AddressId = addressId
                 };
                 db.Factors.Add(newfactor);
                 db.SaveChanges();
                 FactorDetail factorDetail = new FactorDetail()
                 {
-                    FactorId = factor.Id,
+                    FactorId = newfactor.Id,
                     ProductId = id,
                     Count = shoppingCart.DetailCount,
                     DetailPrice = product.Price
@@ -122,7 +148,7 @@ namespace XamarinMVC.Controllers
                 db.FactorDetail.Add(factorDetail);
                 db.SaveChanges();
             }
-            return Redirect("/product/"+id+"/"+product.Name );
+            return Redirect("/product/" + id + "/" + product.Name);
 
         }
         public ActionResult ShoppingCart()

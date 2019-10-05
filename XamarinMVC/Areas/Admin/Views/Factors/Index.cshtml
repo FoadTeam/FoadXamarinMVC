@@ -7,7 +7,7 @@
 
 <div style="margin-bottom:50px">
     <h2 class="pull-right">@XamarinMVC.App_GlobalResources.Texts.ViewFactor</h2>
-    
+
 </div>
 <div class="clearfix" style="margin-bottom:50px"></div>
 <div style="margin-bottom:30px">
@@ -46,7 +46,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
-       
+
         <th></th>
     </tr>
 
@@ -74,11 +74,41 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
-           
+
             <td>
                 @Html.ActionLink(XamarinMVC.App_GlobalResources.Texts.Details, "ShowDetails", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                <a href="#" onclick="AddressIndex(@item.AddressId)" class="btn btn-primary">@XamarinMVC.App_GlobalResources.Texts.Addresses</a>
+              
             </td>
         </tr>
     }
 
 </table>
+
+<div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="mymodalheader" class="modal-header">modallll</div>
+            <div id="bodymodal" class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap-rtl.min.js"></script>
+    <script>
+        function AddressIndex(id) {
+            $.ajax({
+                url: "/Admin/Factors/ShowAddress/" + id,
+                type: "Get",
+                data: {}
+            }).done(function (result) {
+                $('#mymodal').modal("show");
+                $('#mymodalheader').html('sabte');
+                $('#bodymodal').html(result);
+            });
+        }
+    </script>
+}

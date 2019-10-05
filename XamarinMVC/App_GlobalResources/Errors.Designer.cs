@@ -140,5 +140,14 @@ namespace XamarinMVC.App_GlobalResources {
                 return ResourceManager.GetString("Required", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have no registered address.
+        /// </summary>
+        public static string YouHaveNoRegisteredAddress {
+            get {
+                return ResourceManager.GetString("YouHaveNoRegisteredAddress", resourceCulture);
+            }
+        }
     }
 }

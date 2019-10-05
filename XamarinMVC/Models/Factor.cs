@@ -15,6 +15,8 @@ namespace XamarinMVC.Models
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         public int UserId { get; set; }
 
+        public int? AddressId { get; set; }
+
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]
         [Display(ResourceType = typeof(XamarinMVC.App_GlobalResources.Captions), Name = "FactorNumber")]
         [MaxLength(20, ErrorMessageResourceName = "MaxLength", ErrorMessageResourceType = typeof(XamarinMVC.App_GlobalResources.Errors))]

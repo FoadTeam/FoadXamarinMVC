@@ -25,5 +25,10 @@ namespace XamarinMVC.Areas.Admin.Controllers
             var details = db.FactorDetail.Where(d => d.FactorId == id).ToList();
             return View(details);
         }
+        public ActionResult ShowAddress(int? id)
+        {
+            var addredd = db.Addresses.Find(id);
+            return PartialView(addredd);
+        }
     }
 }

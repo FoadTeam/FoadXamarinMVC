@@ -155,7 +155,13 @@ namespace XamarinMVC.Controllers
                         factor.PayTime = DateTime.Now.ToShortTimeString();
 
                         db.SaveChanges();
-
+                        var details = db.FactorDetail.Where(d => d.FactorId == factor.Id).ToList();
+                        foreach (var item in details)
+                        {
+                            var product = db.Products.Find(item.ProductId);
+                            product.Quantity = product.Quantity - item.Count;
+                            db.SaveChanges();
+                        }
                         var user = db.Users.FirstOrDefault(u => u.Mobile == User.Identity.Name);
 
                         var setting = db.Settings.FirstOrDefault();

@@ -267,4 +267,19 @@
   <data name="PaymentResult" xml:space="preserve">
     <value>نتیجه تراکنش</value>
   </data>
+  <data name="Choose" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="SendToThisAddress" xml:space="preserve">
+    <value>فرستادن به این آدرس</value>
+  </data>
+  <data name="This" xml:space="preserve">
+    <value>اینجا</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>کلیک کنید</value>
+  </data>
+  <data name="ForCreateAddressClick" xml:space="preserve">
+    <value>برای وارد کردن آدرس</value>
+  </data>
 </root>

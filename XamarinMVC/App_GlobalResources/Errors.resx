@@ -144,4 +144,7 @@
   <data name="Required" xml:space="preserve">
     <value>Please Enter {0} field</value>
   </data>
+  <data name="YouHaveNoRegisteredAddress" xml:space="preserve">
+    <value>You have no registered address</value>
+  </data>
 </root>

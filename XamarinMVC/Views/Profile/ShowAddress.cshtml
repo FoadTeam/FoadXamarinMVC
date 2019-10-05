@@ -1,0 +1,36 @@
+﻿@model IEnumerable<XamarinMVC.Models.Address>
+
+<div class="clearfix"></div>
+
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-danger">
+        <h4> @XamarinMVC.App_GlobalResources.Errors.YouHaveNoRegisteredAddress</h4>
+        <h4>@XamarinMVC.App_GlobalResources.Texts.ForCreateAddressClick <a href="/Addresses/Index">@XamarinMVC.App_GlobalResources.Texts.This</a>  @XamarinMVC.App_GlobalResources.Texts.Click  </h4>
+
+    </div>
+}
+<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.Label(XamarinMVC.App_GlobalResources.Texts.Choose +" "+ XamarinMVC.App_GlobalResources.Texts.Addresses)
+            @Html.DropDownList("AddressId", null, htmlAttributes: new { @class = "form-control", @id = "addid" })
+        </div>
+        <div style="margin-top:20px;">
+            <button class="btn btn-success btn-block" onclick="myfunction()">@XamarinMVC.App_GlobalResources.Texts.SendToThisAddress</button>
+        </div>
+
+    }
+</div>
+
+<script>
+    function myfunction() {
+        var addressId = document.getElementById("addid").value;
+        var AddID = 0;
+        if (addressId != null) {
+            AddID = addressId;
+        }
+        window.open("/Profile/UpdateAddress/" + AddID);
+    }
+</script>

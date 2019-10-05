@@ -169,6 +169,24 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose.
+        /// </summary>
+        public static string Choose {
+            get {
+                return ResourceManager.GetString("Choose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click.
+        /// </summary>
+        public static string Click {
+            get {
+                return ResourceManager.GetString("Click", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact Us.
         /// </summary>
         public static string ContactUs {
@@ -237,6 +255,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string EditSocialMedia {
             get {
                 return ResourceManager.GetString("EditSocialMedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For Create Address Click.
+        /// </summary>
+        public static string ForCreateAddressClick {
+            get {
+                return ResourceManager.GetString("ForCreateAddressClick", resourceCulture);
             }
         }
         
@@ -439,6 +466,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send To This Address.
+        /// </summary>
+        public static string SendToThisAddress {
+            get {
+                return ResourceManager.GetString("SendToThisAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shopping Cart.
         /// </summary>
         public static string ShoppingCart {
@@ -489,6 +525,15 @@ namespace XamarinMVC.App_GlobalResources {
         public static string Sum {
             get {
                 return ResourceManager.GetString("Sum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This.
+        /// </summary>
+        public static string This {
+            get {
+                return ResourceManager.GetString("This", resourceCulture);
             }
         }
         

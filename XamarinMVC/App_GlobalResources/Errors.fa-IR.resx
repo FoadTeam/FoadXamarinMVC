@@ -144,4 +144,7 @@
   <data name="Required" xml:space="preserve">
     <value>لطفا فیلد {0} را وارد نمایید</value>
   </data>
+  <data name="YouHaveNoRegisteredAddress" xml:space="preserve">
+    <value>شما آدرسی ثبت نکرده اید</value>
+  </data>
 </root>

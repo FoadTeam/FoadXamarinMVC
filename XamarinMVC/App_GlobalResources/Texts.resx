@@ -267,4 +267,19 @@
   <data name="PaymentResult" xml:space="preserve">
     <value>Payment Result</value>
   </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="SendToThisAddress" xml:space="preserve">
+    <value>Send To This Address</value>
+  </data>
+  <data name="This" xml:space="preserve">
+    <value>This</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="ForCreateAddressClick" xml:space="preserve">
+    <value>For Create Address Click</value>
+  </data>
 </root>

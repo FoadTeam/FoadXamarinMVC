@@ -1418,6 +1418,7 @@
     <Content Include="Areas\Admin\Views\ProductFields\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Factors\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Factors\ShowDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Factors\ShowAddress.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1484,6 +1485,7 @@
     <Content Include="Views\Profile\ShowFactors.cshtml" />
     <Content Include="Views\Payment\RedirectVPOS.cshtml" />
     <Content Include="Views\Payment\ShowError.cshtml" />
+    <Content Include="Views\Profile\ShowAddress.cshtml" />
     <None Include="Web References\BankMellatService\IPaymentGateway.wsdl" />
     <None Include="Web References\BankMellatService\PaymentGatewayImplService.wsdl" />
     <Content Include="Web References\BankMellatService\Reference.map">
