@@ -125,6 +125,24 @@ namespace XamarinMVC.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult ShowPrint()
+        {
+            return View();
+        }
+        public ActionResult LoadReport()
+        {
+            var product = db.Products.OrderByDescending(p => p.Quantity).Take(8).ToList();
+            var R = new Stimulsoft.Report.StiReport();
+            R.Load(Server.MapPath("/Reports/QtyReport.mrt"));
+            R.Compile();
+            R.RegBusinessObject("myData", product);
+
+            return Stimulsoft.Report.Mvc.StiMvcViewer.GetReportSnapshotResult(R);
+        }
+        public ActionResult MyEvent()
+        {
+            return Stimulsoft.Report.Mvc.StiMvcViewer.ViewerEventResult(HttpContext);
+        }
 
         protected override void Dispose(bool disposing)
         {

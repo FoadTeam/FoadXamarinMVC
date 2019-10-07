@@ -1,0 +1,9 @@
+﻿@using Stimulsoft.Report.Mvc
+
+@Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions()
+{
+    Theme = StiTheme.Office2010,
+    ActionGetReportSnapshot="LoadReport",
+    ActionViewerEvent="MyEvent"
+
+})

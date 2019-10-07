@@ -412,6 +412,15 @@ namespace XamarinMVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quantity Report.
+        /// </summary>
+        public static string QuantityReport {
+            get {
+                return ResourceManager.GetString("QuantityReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string Register {

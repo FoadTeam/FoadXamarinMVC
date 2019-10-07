@@ -282,4 +282,7 @@
   <data name="ForCreateAddressClick" xml:space="preserve">
     <value>برای وارد کردن آدرس</value>
   </data>
+  <data name="QuantityReport" xml:space="preserve">
+    <value>گزارش فاکتور</value>
+  </data>
 </root>

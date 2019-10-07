@@ -282,4 +282,7 @@
   <data name="ForCreateAddressClick" xml:space="preserve">
     <value>For Create Address Click</value>
   </data>
+  <data name="QuantityReport" xml:space="preserve">
+    <value>Quantity Report</value>
+  </data>
 </root>

@@ -1431,12 +1431,15 @@
     <Content Include="Areas\Admin\Views\Factors\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Factors\ShowDetails.cshtml" />
     <Content Include="Areas\Admin\Views\Factors\ShowAddress.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\ShowPrint.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Scripts\GalleryScript.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Reports\QtyReport.mrt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1640,7 +1643,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Images\Gallery\" />
     <Folder Include="Images\Product\" />
-    <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App_GlobalResources\Captions.resx">
