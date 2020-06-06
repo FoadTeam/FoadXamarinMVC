@@ -7,12 +7,12 @@
     <button type="submit" name="btn1" value="fa-IR" style="padding:0;border-radius:50%; border:0"><img width="30" height="30" src="~/Images/Site/fa.png" /></button>
     @if (User.Identity.IsAuthenticated)
     {
-        <a href="/Account/SignOut"><span class="fa fa-sign-out"></span></a>
+        <a href="/Account/SignOut"><span class="fa fa-sign-out"></span> |</a>
         <a href="/Profile">@XamarinMVC.App_GlobalResources.Texts.Dashboard</a>
     }
     else
     {
-        <a href="/Account/Register">@XamarinMVC.App_GlobalResources.Texts.Register</a>
+        <a href="/Account/Register">@XamarinMVC.App_GlobalResources.Texts.Register |</a>
         <a href="/Account/Login">@XamarinMVC.App_GlobalResources.Texts.Login</a>
     }
 </div>

@@ -10,7 +10,7 @@
 
 body {
     direction: ltr;
-    background-color: white;
+    background-color: black;
     margin: auto;
     font-family: iranyekanwebregular,IRANSansWeb,Tahoma;
 }
@@ -24,11 +24,25 @@ body {
     padding: 10px 30px;
 }
 .menus {
-    background-color: #293955;
+    /*background-color: #293955;*/
+}
+.LogoDetail {
+    font-weight: bolder;
+    justify-content: center;
+    width: 70%;
+    
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: whitesmoke;
 }
 #navbar {
     overflow: hidden;
-    background-color: #293955;
+    margin: 0 5% 0 5%;
+    background-color: #bd0000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 0px
 }
 
     #navbar a {
@@ -42,8 +56,9 @@ body {
     }
 
         #navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            font-weight: bolder;
+            border-bottom: outset;
+            color: white;
         }
 
 .content {
@@ -53,6 +68,7 @@ body {
 .sticky {
     position: fixed;
     top: 0;
+    margin: 0px !important;
     width: 100%;
 }
 
@@ -120,11 +136,11 @@ ul {
 .dropdown-content {
     display: none;
     position: fixed;
-    background-color: #293955;
+    background-color: #bd0000;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
-    border-radius:5px;
+    border-radius: 5px;
     z-index: 101;
 }
 
@@ -204,3 +220,64 @@ img {
     .active, .demo:hover {
         opacity: 1;
     }
+
+
+
+.neon {
+    margin: 0;
+    height: 150px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(500%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 140px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+}
+
+    .text::before {
+        content: attr(data-text);
+        position: absolute;
+        color: white;
+        filter: blur(0.02em);
+        mix-blend-mode: difference;
+    }
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg,red,#ff0000,#ff9900,#fb3535,red);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient( circle, white, transparent 25% ) center / 25% 25%, radial-gradient( circle, white, black 25% ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}

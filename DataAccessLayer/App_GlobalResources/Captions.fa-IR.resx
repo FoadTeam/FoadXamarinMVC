@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddressCity" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="AddressPostalCode" xml:space="preserve">
+    <value>کدپستی</value>
+  </data>
+  <data name="AddressState" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="AddressText" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>موبایل</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>رمز عبور</value>
+  </data>
+  <data name="RePassword" xml:space="preserve">
+    <value>تکرار رمز عبور</value>
+  </data>
+  <data name="RoleAdmin" xml:space="preserve">
+    <value>مدیر</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>نام نقش</value>
+  </data>
+  <data name="RoleTitle" xml:space="preserve">
+    <value>عنوان نقش</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>کلمه عبور جدید</value>
+  </data>
+  <data name="NewRePassword" xml:space="preserve">
+    <value>تکرار کلمه عبور جدید</value>
+  </data>
+  <data name="ActivationCode" xml:space="preserve">
+    <value>کد فعالسازی</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>پنل مدیریت</value>
+  </data>
+  <data name="ContactSetting" xml:space="preserve">
+    <value>تنظیمات تماس</value>
+  </data>
+  <data name="SiteSetting" xml:space="preserve">
+    <value>تنظیمات سایت</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>شرح</value>
+  </data>
+  <data name="FactorIsSend" xml:space="preserve">
+    <value>پیامک فاکتور</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>فکس</value>
+  </data>
+  <data name="KeyWords" xml:space="preserve">
+    <value>کلمات کلیدی</value>
+  </data>
+  <data name="PayIsSend" xml:space="preserve">
+    <value>پیامک پرداخت</value>
+  </data>
+  <data name="SmsPassword" xml:space="preserve">
+    <value>پیامک رمزعبور</value>
+  </data>
+  <data name="SmsSender" xml:space="preserve">
+    <value>پیامک فرستنده</value>
+  </data>
+  <data name="SmsUser" xml:space="preserve">
+    <value>نام کاربری فاکتور</value>
+  </data>
+  <data name="Tell" xml:space="preserve">
+    <value>تلفن</value>
+  </data>
+  <data name="EmailHost" xml:space="preserve">
+    <value>دامنه ایمیل</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>پسورد ایمیل</value>
+  </data>
+  <data name="EmailPort" xml:space="preserve">
+    <value>پورت ایمیل</value>
+  </data>
+  <data name="EmailSSl" xml:space="preserve">
+    <value>SSL</value>
+  </data>
+  <data name="EmailUser" xml:space="preserve">
+    <value>نام کاربری ایمیل</value>
+  </data>
+  <data name="CallSetting" xml:space="preserve">
+    <value>تنظیمات تماس</value>
+  </data>
+  <data name="SMSEmailSetting" xml:space="preserve">
+    <value>تنظیمات پیامک و ایمیل</value>
+  </data>
+  <data name="SocialIcon" xml:space="preserve">
+    <value>آیکون شبکه اجتماعی</value>
+  </data>
+  <data name="SocialLink" xml:space="preserve">
+    <value>لینک شبکه اجتماعی</value>
+  </data>
+  <data name="SocialName" xml:space="preserve">
+    <value>نام شبکه اجتماعی</value>
+  </data>
+  <data name="SocialNotShow" xml:space="preserve">
+    <value>نمایش ندادن شبکه اجتماعی</value>
+  </data>
+  <data name="SocialOrder" xml:space="preserve">
+    <value>ترتیب نمایش شبکه اجتماعی</value>
+  </data>
+  <data name="NotShow" xml:space="preserve">
+    <value>نشان ندادن</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>ترتیب نمایش</value>
+  </data>
+  <data name="ENName" xml:space="preserve">
+    <value>نام انگلیسی</value>
+  </data>
+  <data name="FAName" xml:space="preserve">
+    <value>نام فارسی</value>
+  </data>
+  <data name="ImageName" xml:space="preserve">
+    <value>نام عکس</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>تصویر</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>قیمت</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>موجودی</value>
+  </data>
+  <data name="Seen" xml:space="preserve">
+    <value>بازدید</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>محصولات</value>
+  </data>
+  <data name="ProductId" xml:space="preserve">
+    <value>آیدی محصولات</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>گالری</value>
+  </data>
+  <data name="FieldValue" xml:space="preserve">
+    <value>مقدار فیلد</value>
+  </data>
+  <data name="Field" xml:space="preserve">
+    <value>مشخصه</value>
+  </data>
+  <data name="FieldId" xml:space="preserve">
+    <value>آیدی مشخصه</value>
+  </data>
+  <data name="ProductField" xml:space="preserve">
+    <value>مشخصه محصولات</value>
+  </data>
+  <data name="ENFieldValue" xml:space="preserve">
+    <value>مقدار مشخصه انگلیسی</value>
+  </data>
+  <data name="FAFieldValue" xml:space="preserve">
+    <value>مقدار مشخصه فارسی</value>
+  </data>
+  <data name="LastProduct" xml:space="preserve">
+    <value>آخرین محصولات</value>
+  </data>
+  <data name="SeenProduct" xml:space="preserve">
+    <value>پربازدیدترین ها</value>
+  </data>
+  <data name="SuggestedProducts" xml:space="preserve">
+    <value>محصولات پیشنهادی</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="DetailPrice" xml:space="preserve">
+    <value>مبلغ واحد</value>
+  </data>
+  <data name="FactorDate" xml:space="preserve">
+    <value>تاریخ فاکتور</value>
+  </data>
+  <data name="FactorId" xml:space="preserve">
+    <value>آیدی فاکتور</value>
+  </data>
+  <data name="FactorNumber" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="IsPay" xml:space="preserve">
+    <value>پرداخت شده؟</value>
+  </data>
+  <data name="PayDate" xml:space="preserve">
+    <value>تاریخ پرداخت</value>
+  </data>
+  <data name="PayNumber" xml:space="preserve">
+    <value>شماره پیگیری</value>
+  </data>
+  <data name="PayTime" xml:space="preserve">
+    <value>زمان پرداخت</value>
+  </data>
+  <data name="DetailCount" xml:space="preserve">
+    <value>تعداد سفارش</value>
+  </data>
+  <data name="Factor" xml:space="preserve">
+    <value>فاکتور</value>
+  </data>
+</root>
