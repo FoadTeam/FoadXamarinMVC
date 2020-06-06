@@ -1309,6 +1309,8 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\SiteStyle-rtl.css" />
     <Content Include="Content\SiteStyle.css" />
+    <Content Include="Content\SVG\BuyBasket.svg" />
+    <Content Include="Content\SVG\FastFood.svg" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -1350,6 +1352,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="fonts\FastFood.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\iranyekanwebregular.svg" />
@@ -1614,6 +1617,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Partials\_SVG.cshtml" />
     <None Include="Web References\BankMellatService\IPaymentGateway.wsdl" />
     <None Include="Web References\BankMellatService\PaymentGatewayImplService.wsdl" />
     <Content Include="Web References\BankMellatService\Reference.map">

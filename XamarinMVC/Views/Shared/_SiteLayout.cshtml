@@ -31,20 +31,22 @@
         }
 
     }
+    
 </head>
 <body>
     @{
+
         if (dir == "ltr")
         {
             <div style="margin-top:10px;">
 
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <div class="neon">
-                            <span class="text" data-text="BigBoss">BigBoss</span>
-                            <span class="gradient"></span>
-                            <span class="spotlight"></span>
-                        </div>
-                        <h4 style="margin-right: 15%;" class="LogoDetail">@XamarinMVC.App_GlobalResources.Texts.FastFood | بیگ باس| رییس باس | BeTheBoss# </h4>
+                    <div class="neon">
+                        <span class="text" data-text="BigBoss">BigBoss</span>
+                        <span class="gradient"></span>
+                        <span class="spotlight"></span>
+                    </div>
+                    <h4 style="margin-right: 15%;" class="LogoDetail">@XamarinMVC.App_GlobalResources.Texts.FastFood | بیگ باس| رییس باس | BeTheBoss# </h4>
                 </div>
 
                 <div dir="@dir" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -133,7 +135,7 @@
     @Scripts.Render("~/bundles/SiteScript")
     @RenderSection("Scripts", required: false)
     @Scripts.Render("~/bundles/jqueryui")
- 
+
 
 </body>
 </html>

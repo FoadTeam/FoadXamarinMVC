@@ -1,4 +1,5 @@
-﻿@font-face {
+﻿
+@font-face {
     font-family: 'IRANSansWeb';
     src: url('../fonts/IRANSansWeb.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb.ttf') format('truetype'), url('../fonts/IRANSansWeb.woff') format('woff'), url('../fonts/IRANSansWeb_Bold.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb_Bold.ttf') format('truetype'), url('../fonts/IRANSansWeb_Bold.woff') format('woff');
 }
@@ -38,6 +39,8 @@ body {
     color: whitesmoke;
 }
 #navbar {
+    top: 40px;
+    position: relative;
     overflow: hidden;
     margin: 0 5% 0 5%;
     background-color: #bd0000;
@@ -63,11 +66,13 @@ body {
 
 .content {
     padding: 16px;
+    background-color: #ded5d5;
+    box-shadow: inset 0px 20px 20px 0px black;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
+    position: fixed!important;
+    top: 0!important;
     margin: 0px !important;
     width: 100%;
 }
@@ -198,6 +203,7 @@ img {
 
 .container {
     position: relative;
+    margin-top: 20px;
 }
 
 .mySlides {
@@ -241,7 +247,7 @@ img {
     color: white;
     font-size: 140px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: fantasy;
     text-transform: uppercase;
     position: relative;
     user-select: none;

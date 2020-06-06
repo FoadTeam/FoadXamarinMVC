@@ -28,7 +28,26 @@
 
 <div id="navbar" class="hidden-xs" style="z-index:1;">
     <div class="navbar-@fa" style="margin-@fa:20px;">
-        <a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+
+        <svg class="menus">
+            <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#hamburger" /></a>
+        </svg>
+        <svg class="menus" >
+            <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#pizza-1" /></a>
+        </svg>
+        <svg class="menus" >
+            <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#fast-food-5" /></a>
+        </svg>
+        <svg class="menus" >
+            <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#fast-food" /></a>
+        </svg>
+        <svg class="menus" >
+            <a xlink:href="\"><use xlink:href="~/Content/SVG/FastFood.svg#hot-dog" /></a>
+        </svg>
+        <svg class="menus" >
+            <a xlink:href="\"><use xlink:href="~/Content/SVG/FastFood.svg#soda" /></a>
+        </svg>
+        @*<a href="#">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
         <div class="dropdown">
             <a>@XamarinMVC.App_GlobalResources.Texts.Groups</a>
             <div class="dropdown-content">
@@ -37,6 +56,7 @@
             </div>
         </div>
         @{
+
             foreach (var item in Model)
             {
                 if (dir == "rtl")
@@ -49,27 +69,49 @@
                 }
 
             }
-        }
+        }*@
+
     </div>
+
     <div class="navbar-@en" style="margin-@en:20px; float:@en">
-        <a href="/profile/ShoppingCart"><span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:@ViewBag.CountShoppingCart </span></a>
+        <a href="/profile/ShoppingCart"><span class=" fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:@ViewBag.CountShoppingCart</span></a>
     </div>
 </div>
 <div id="navbar" class="visible-xs" style="z-index:1">
-    <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
-    @{
-        foreach (var item in Model)
-        {
-            if (dir == "rtl")
-            {
-                <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameEN</a>
-            }
-            else
-            {
-                <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameFA</a>
-            }
-
-        }
-    }
+    <svg  class="menus" >
+        <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#hamburger" /></a>
+    </svg>
+    <svg class="menus" >
+        <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#pizza-1" /></a>
+    </svg>
+    <svg class="menus" >
+        <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#fast-food-5" /></a>
+    </svg>
+    <svg class="menus" >
+        <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#fast-food" /></a>
+    </svg>
+    <svg class="menus" >
+        <a xlink:href="\" ><use xlink:href="~/Content/SVG/FastFood.svg#hot-dog" /></a>
+    </svg>
+    <svg class="menus" >
+        <a xlink:href="\"><use xlink:href="~/Content/SVG/FastFood.svg#soda" /></a>
+    </svg>        
     <a href="/profile/ShoppingCart" style="float:none"> <span class="fa fa-shopping-cart">@XamarinMVC.App_GlobalResources.Texts.ShoppingCart:@ViewBag.CountShoppingCart</span></a>
+
+    @* <a href="#" style="float:none">@XamarinMVC.App_GlobalResources.Texts.HomePage</a>
+        @{
+            foreach (var item in Model)
+            {
+                if (dir == "rtl")
+                {
+                    <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameEN</a>
+                }
+                else
+                {
+                    <a href="/Home/ShowMenu/@item.Id" target="_blank" style="float:none">@item.NameFA</a>
+                }
+
+            }
+        }
+    *@
 </div>

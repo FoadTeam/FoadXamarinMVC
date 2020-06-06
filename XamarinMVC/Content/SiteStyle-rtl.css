@@ -1,4 +1,5 @@
-﻿@font-face {
+﻿
+@font-face {
     font-family: 'IRANSansWeb';
     src: url('../fonts/IRANSansWeb.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb.ttf') format('truetype'), url('../fonts/IRANSansWeb.woff') format('woff'), url('../fonts/IRANSansWeb_Bold.eot') format('embedded-opentype'), url('../fonts/IRANSansWeb_Bold.ttf') format('truetype'), url('../fonts/IRANSansWeb_Bold.woff') format('woff');
 }
@@ -6,6 +7,11 @@
 @font-face {
     font-family: 'iranyekanwebregular';
     src: url('../fonts/iranyekanwebregular.eot') format('embedded-opentype'), url('../fonts/iranyekanwebregular.ttf') format('truetype'), url('../fonts/iranyekanwebregular.woff') format('woff');
+}
+
+
+.BuyBasket {
+    background-image: url('SVG/BuyBasket.svg');
 }
 
 body {
@@ -23,21 +29,28 @@ body {
     background-color: whitesmoke;
     padding: 10px 10px;
 }
+
 .menus {
     /*background-color: #293955;*/
+    height: 50px;
+    width: 50px;
+    margin: 5px 0 5px 20px;
 }
+
 .LogoDetail {
     font-weight: bolder;
     justify-content: center;
     width: 70%;
-    
     text-align: center;
     padding: 10px;
     border-radius: 5px;
     background-color: red;
     color: whitesmoke;
 }
+
 #navbar {
+    top: 40px;
+    position: relative;
     overflow: hidden;
     margin: 0 5% 0 5%;
     background-color: #bd0000;
@@ -46,7 +59,6 @@ body {
 }
 
     #navbar a {
-        
         float: right;
         display: block;
         color: white;
@@ -58,18 +70,20 @@ body {
 
         #navbar a:hover {
             /*background-color: #ddd;*/
-            font-weight:bolder;
-            border-bottom:outset;
+            font-weight: bolder;
+            border-bottom: outset;
             color: white;
         }
 
 .content {
     padding: 16px;
+    background-color: #ded5d5;
+    box-shadow: inset 0px 20px 20px 0px black;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: 0 !important;
     margin: 0px !important;
     width: 100%;
 }
@@ -77,55 +91,66 @@ body {
     .sticky + .content {
         padding-top: 60px;
     }
-ul{
-    padding:0;
-    list-style:none;
+
+ul {
+    padding: 0;
+    list-style: none;
 }
-.slider{
-    padding-top:50px;
-    margin-left:10px;
-    margin-right:10px;
-    overflow:hidden;
-    position:relative;
+
+.slider {
+    padding-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
 }
-.small2{
-    font-size:14px;
-    margin-top:50px;
-    width:100%;
-    overflow:hidden;
-    position:relative;
+
+.small2 {
+    font-size: 14px;
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
-.small2 .small-ul{
-    display:flex;
-    position:absolute;
-    top:0;
+
+    .small2 .small-ul {
+        display: flex;
+        position: absolute;
+        top: 0;
+    }
+
+        .small2 .small-ul li {
+            margin-left: 5px;
+            transition: width 1s ease-in-out;
+            margin-left: -4px;
+        }
+
+    .small2 .small-span {
+        position: absolute;
+        top: calc(50%-20px);
+        opacity: 0.1;
+        cursor: pointer;
+        color: #fff;
+        text-shadow: 1px 2px 10px rgba(0,0,0,1);
+    }
+
+    .small2 small-span :hover {
+        opacity: 0.5;
+    }
+
+    .small2 .small-span:first-of-type {
+        right: 10px;
+    }
+
+    .small2 .small-span:last-of-type {
+        left: 10px;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
-.small2 .small-ul li{
-    margin-left:5px;
-    transition:width 1s ease-in-out;
-    margin-left:-4px;
-}
-.small2 .small-span{
-    position:absolute;
-    top:calc(50%-20px);
-    opacity:0.1;
-    cursor:pointer;
-    color:#fff;
-    text-shadow:1px 2px 10px rgba(0,0,0,1);
-}
-.small2 small-span :hover{
-    opacity:0.5;
-}
-.small2 .small-span:first-of-type{
-    right:10px;
-}
-.small2 .small-span:last-of-type{
-    left:10px;
-}
-.dropdown{
-    position:relative;
-    display:inline-block;
-}
+
 .dropdown-content {
     display: none;
     position: fixed;
@@ -136,8 +161,9 @@ ul{
     border-radius: 5px;
     z-index: 101;
 }
-.dropdown:hover .dropdown-content{
-    display:block;
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .container-img {
@@ -168,28 +194,31 @@ ul{
 }
 
 
-.title-color{
-    color:#00ad5f;
+.title-color {
+    color: #00ad5f;
 }
-.red-text-color{
-    color:tomato;
+
+.red-text-color {
+    color: tomato;
 }
-.price-color{
-    color:darkgray;
+
+.price-color {
+    color: darkgray;
 }
-.mg-top-40{
-    margin-top:40px;
+
+.mg-top-40 {
+    margin-top: 40px;
 }
 
 
 
 img {
     vertical-align: middle;
-
 }
 
 .container {
     position: relative;
+    margin-top: 20px;
 }
 
 .mySlides {
@@ -234,7 +263,7 @@ img {
     color: white;
     font-size: 140px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: fantasy;
     text-transform: uppercase;
     position: relative;
     user-select: none;
@@ -274,4 +303,3 @@ img {
         transform: translate(50%, 50%);
     }
 }
-
